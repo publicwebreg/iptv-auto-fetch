@@ -1,86 +1,112 @@
 #!/usr/bin/env python3
 """
-IPTV Source Auto-Fetch Script v3
-从多个公开源自动抓取、合并、去重国内直播频道 M3U 列表
-v3 改进：保留 tvg-logo/group-title/频道名中文/统一换行符 CRLF
+IPTV Source Auto-Fetch Script v4
+核心改进：存活检测 + 只保留可播源
 """
-import os
-import re
-import json
+import os, re, json, sys, subprocess
 import urllib.request
 from pathlib import Path
 from datetime import datetime
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 OUTPUT_DIR = Path("output")
 OUTPUT_DIR.mkdir(exist_ok=True)
-TIMEOUT = 10
 
-# 源列表（fanmingming 从中国访问慢，放到最后或者跳过）
 SOURCES = {
     "iptv-org": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u",
     "YueChan": "https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u",
-    "fanmingming-ipv6": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",
+    "fanmingming": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",
 }
 
-HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
-TIMEOUT = 20
+# ============ 已知可用的高质量回退源 ============
+FALLBACK = [
+    # (频道名, URL, group_title, tvg_logo)
+    # CCTV 各频道（多路源）
+    ("CCTV-1综合", "https://liveplay-srs.voc.com.cn/hls/tv/134_180adf.m3u8", "央视频道", "https://live.fanmingming.cn/tv/CCTV1.png"),
+    ("CCTV-1综合", "http://69.30.245.50/live/cctv1.m3u8", "央视频道", "https://live.fanmingming.cn/tv/CCTV1.png"),
+    ("CCTV-1综合", "http://198.204.240.250:82/live/cctv1.m3u8", "央视频道", "https://live.fanmingming.cn/tv/CCTV1.png"),
+    ("CCTV-1综合", "http://74.91.26.218:82/live/cctv1hd.m3u8", "央视频道", "https://live.fanmingming.cn/tv/CCTV1.png"),
+    ("CCTV-2财经", "http://74.91.26.218:82/live/cctv2hd.m3u8", "央视频道", "https://live.fanmingming.cn/tv/CCTV2.png"),
+    ("CCTV-3综艺", "http://74.91.26.218:82/live/cctv3hd.m3u8", "央视频道", "https://live.fanmingming.cn/tv/CCTV3.png"),
+    ("CCTV-4中文国际", "http://74.91.26.218:82/live/cctv4hd.m3u8", "央视频道", "https://live.fanmingming.cn/tv/CCTV4.png"),
+    ("CCTV-4K", "http://198.204.240.250:82/live/cctv4k.m3u8", "央视频道", ""),
+    ("CCTV-6电影", "http://69.30.245.50/live/cctv6.m3u8", "央视频道", "https://live.fanmingming.cn/tv/CCTV6.png"),
+    ("CCTV-6电影", "http://198.204.240.250:82/live/cctv6.m3u8", "央视频道", "https://live.fanmingming.cn/tv/CCTV6.png"),
+    ("CCTV-7国防军事", "http://74.91.26.218:82/live/cctv7hd.m3u8", "央视频道", "https://live.fanmingming.cn/tv/CCTV7.png"),
+    ("CCTV-8电视剧", "http://74.91.26.218:82/live/cctv8hd.m3u8", "央视频道", "https://live.fanmingming.cn/tv/CCTV8.png"),
+    ("CCTV-8K", "http://192.151.150.154/live/cctv8k.m3u8", "央视频道", ""),
+    ("CCTV-8K", "http://198.204.240.250:82/live/cctv8k.m3u8", "央视频道", ""),
+    ("CCTV-9纪录", "https://xykt-fix.github.io/Y77.m3u8", "央视频道", "https://live.fanmingming.cn/tv/CCTV9.png"),
+    ("CCTV-10科教", "http://74.91.26.218:82/live/cctv10hd.m3u8", "央视频道", "https://live.fanmingming.cn/tv/CCTV10.png"),
+    ("CCTV-11戏曲", "http://74.91.26.218:82/live/cctv11hd.m3u8", "央视频道", "https://live.fanmingming.cn/tv/CCTV11.png"),
+    ("CCTV-11戏曲", "https://xykt-fix.github.io/play/a02b/index.m3u8", "央视频道", "https://live.fanmingming.cn/tv/CCTV11.png"),
+    ("CCTV-12社会与法", "http://74.91.26.218:82/live/cctv12hd.m3u8", "央视频道", "https://live.fanmingming.cn/tv/CCTV12.png"),
+    ("CCTV-13新闻", "http://74.91.26.218:82/live/cctv13hd.m3u8", "央视频道", "https://live.fanmingming.cn/tv/CCTV13.png"),
+    ("CCTV-14少儿", "http://74.91.26.218:82/live/cctv14hd.m3u8", "央视频道", "https://live.fanmingming.cn/tv/CCTV14.png"),
+    ("CCTV-15音乐", "http://74.91.26.218:82/live/cctv15hd.m3u8", "央视频道", "https://live.fanmingming.cn/tv/CCTV15.png"),
+    ("CCTV-15音乐", "https://xykt-fix.github.io/play/a02e/index.m3u8", "央视频道", "https://live.fanmingming.cn/tv/CCTV15.png"),
+    ("CCTV-16奥林匹克", "http://74.91.26.218:82/live/cctv16hd.m3u8", "央视频道", "https://live.fanmingming.cn/tv/CCTV16.png"),
+    ("CCTV-17农业农村", "http://74.91.26.218:82/live/cctv17hd.m3u8", "央视频道", "https://live.fanmingming.cn/tv/CCTV17.png"),
+    # CGTN
+    ("CGTN英语", "https://english-livetx.cgtn.com/hls/yypdyyctzb_hd.m3u8", "央视频道", "https://live.fanmingming.cn/tv/CGTN.png"),
+    ("CGTN纪录", "https://docu-livetx.cgtn.com/hls/yspdydzb/yspdydzb_hd.m3u8", "央视频道", ""),
+    # 其他频道
+    ("Ando TV", "http://play.kankanlive.com/live/1711956137852982.m3u8", "其他", ""),
+    ("面包台 Bread TV", "https://video.bread-tv.com:8091/hls-live24/online/index.m3u8", "其他", ""),
+    ("之江纪录", "https://zhjliveback.cztv.com/livezb/ggnew/ggnew.m3u8", "浙江", ""),
+    ("浙江国际", "https://zhjliveback.cztv.com/livezb/gjnew/gjnew.m3u8", "浙江", ""),
+    ("浙江少儿", "https://zhjliveback.cztv.com/livezb/shaoernew/shaoernew.m3u8", "浙江", ""),
+    ("浙江教科", "https://zhjliveback.cztv.com/livezb/jknew/jknew.m3u8", "浙江", ""),
+    ("浙江民生", "https://zhjliveback.cztv.com/livezb/msnew/msnew.m3u8", "浙江", ""),
+    ("浙江经济", "https://zhjliveback.cztv.com/livezb/jjnew/jjnew.m3u8", "浙江", ""),
+    ("浙江新闻", "https://zhjliveback.cztv.com/livezb/xwnew/xwnew.m3u8", "浙江", ""),
+    ("浙江钱江", "https://zhjliveback.cztv.com/livezb/qjnew/qjnew.m3u8", "浙江", ""),
+]
 
+HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
+TIMEOUT = 10
+HEALTH_TIMEOUT = 4  # 存活检测超时（秒）
+
+# ============ 工具函数 ============
 
 def fetch_m3u(name, url):
-    """获取单个 M3U 源"""
+    print(f"  ▶ 获取 {name} ...", flush=True)
     try:
-        print(f"  ▶ 获取 {name} ...")
         req = urllib.request.Request(url, headers=HEADERS)
         resp = urllib.request.urlopen(req, timeout=TIMEOUT)
-        text = resp.read().decode("utf-8", errors="replace")
-        # 统一换行为 \n
-        text = text.replace("\r\n", "\n").replace("\r", "\n")
-        lines = text.splitlines()
-        print(f"    ✓ {name}: {len(lines)} 行")
-        return lines
+        text = resp.read().decode("utf-8", errors="replace").replace("\r\n", "\n").replace("\r", "\n")
+        print(f"    ✓ {name}: {len(text.splitlines())} 行", flush=True)
+        return text.splitlines()
     except Exception as e:
-        print(f"    ✗ {name} 失败: {e}")
+        print(f"    ✗ {name}: {e}", flush=True)
         return []
 
 
-# 单属性提取正则
 ATTR_RE = re.compile(r'(tvg-id|tvg-name|tvg-logo|group-title)="([^"]*)"')
-
-# 无意义频道名过滤
 IGNORE_NAMES = {"\\", "n", "rj", "app", "xiaomi", "huawei", ""}
 
 
 def parse_extinf(line):
-    """解析 EXTINF 行，返回 (tags_dict, channel_name) 或 None"""
     if not line.startswith("#EXTINF:"):
         return None
-
-    # 取最后一个逗号后面的文本作为频道名
     comma_idx = line.rfind(",")
     if comma_idx < 0:
         return None
     raw_name = line[comma_idx + 1:].strip()
-
-    # 过滤无意义名称
     if not raw_name or raw_name.lower() in IGNORE_NAMES:
         return None
-    if re.match(r'^\d{8}\s\d{2}:\d{2}$', raw_name):  # 日期时间
+    if re.match(r'^\d{8}\s\d{2}:\d{2}$', raw_name):
         return None
-
-    # 取逗号之前的属性部分，逐个提取
-    attr_part = line[:comma_idx]
     tags = {}
-    for m in ATTR_RE.finditer(attr_part):
-        key = m.group(1).replace("-", "_")  # tvg-id → tvg_id
+    for m in ATTR_RE.finditer(line[:comma_idx]):
+        key = m.group(1).replace("-", "_")
         val = m.group(2).strip()
         if val:
             tags[key] = val
-
     return tags, raw_name
 
 
 def parse_m3u(lines):
-    """解析 M3U 格式，提取频道信息和URL，只保留 http/https"""
     channels = []
     i = 0
     while i < len(lines):
@@ -90,25 +116,19 @@ def parse_m3u(lines):
             if result is None:
                 i += 1
                 continue
-
             tags, ch_name = result
-
-            # 下一行是 URL
             if i + 1 < len(lines):
                 url = lines[i + 1].strip()
-                # 只保留 http/https 流
                 if url and (url.startswith("http://") or url.startswith("https://")):
-                    # 过滤百度静态资源（有时效性）
                     if "bdstatic.com" in url or "baidu" in url.lower():
-                        i += 2
-                        continue
-                    # 过滤明显无效的地址
+                        i += 2; continue
                     if "127.0.0.1" in url or "localhost" in url:
-                        i += 2
-                        continue
+                        i += 2; continue
+                    # 过滤 fanmingming IPv6 (移动内网 403)
+                    if "2409:8087:" in url:
+                        i += 2; continue
                     channels.append({
-                        "name": ch_name,
-                        "url": url,
+                        "name": ch_name, "url": url,
                         "tvg_id": tags.get("tvg_id", ""),
                         "tvg_name": tags.get("tvg_name", ""),
                         "tvg_logo": tags.get("tvg_logo", ""),
@@ -120,188 +140,175 @@ def parse_m3u(lines):
     return channels
 
 
-def check_url(url):
-    """快速检测URL是否可访问（HEAD请求）"""
+def health_check(ch):
+    """curl 检测频道是否可访问（更可靠超时）"""
     try:
-        req = urllib.request.Request(url, method="HEAD", headers=HEADERS)
-        resp = urllib.request.urlopen(req, timeout=5)
-        return resp.status == 200
+        result = subprocess.run(
+            ["curl", "-sI", "--connect-timeout", "3", "--max-time", "5",
+             "-A", "Mozilla/5.0", "-o", "/dev/null", "-w", "%{http_code}",
+             ch["url"]],
+            capture_output=True, text=True, timeout=8
+        )
+        code = result.stdout.strip()
+        return code == "200" or code == "302" or code == "301"
     except Exception:
         return False
 
 
-def validate_channels(channels):
-    """并发检测频道有效性"""
-    from concurrent.futures import ThreadPoolExecutor, as_completed
-    print(f"\n  [存活检测] 共 {len(channels)} 个频道，正在检测...")
-    valid = []
-
-    def check(ch):
-        if check_url(ch["url"]):
-            return ch
-        return None
-
-    with ThreadPoolExecutor(max_workers=30) as executor:
-        futures = {executor.submit(check, ch): ch for ch in channels}
-        done = 0
-        for future in as_completed(futures):
-            done += 1
-            if done % 200 == 0:
-                print(f"    已检测 {done}/{len(channels)}...")
-            result = future.result()
-            if result:
-                valid.append(result)
-
-    print(f"    ✓ 存活: {len(valid)}/{len(channels)}")
-    return valid
+def add_fallback(channels):
+    """加入已知可用的回退源，同URL合并元数据"""
+    existing = {ch["url"]: ch for ch in channels}
+    for name, url, group, logo in FALLBACK:
+        if url in existing:
+            # 合并：用 fallback 的台标和分组覆盖
+            ch = existing[url]
+            if logo and not ch.get("tvg_logo"):
+                ch["tvg_logo"] = logo
+            if not ch.get("group_title"):
+                ch["group_title"] = group
+            if not ch.get("tvg_name"):
+                ch["tvg_name"] = name
+        else:
+            channels.append({
+                "name": name, "url": url,
+                "tvg_id": "", "tvg_name": name,
+                "tvg_logo": logo, "group_title": group,
+            })
+    return channels
 
 
 def deduplicate(channels):
-    """按URL去重（同URL保留第一个）"""
     seen = set()
     result = []
     for ch in channels:
-        key = ch["url"]
-        if key not in seen:
-            seen.add(key)
+        if ch["url"] not in seen:
+            seen.add(ch["url"])
             result.append(ch)
     return result
 
 
-def generate_m3u(channels, path):
-    """生成标准 M3U 文件，保留 tvg-logo/group-title"""
+def gen_m3u(channels, path, label=""):
     now = datetime.now().strftime("%Y-%m-%d %H:%M")
     with open(path, "w", encoding="utf-8") as f:
         f.write("#EXTM3U\n")
-        f.write(f"# Generated: IPTV Auto-Fetch v3\n")
+        f.write(f"# Generated: IPTV Auto-Fetch v4 {label}\n")
         f.write(f"# Date: {now}\n")
         f.write(f"# Total: {len(channels)} channels\n\n")
         for ch in channels:
-            # 构建带属性的 EXTINF
             attrs = []
-            if ch.get("tvg_id"):
-                attrs.append(f'tvg-id="{ch["tvg_id"]}"')
-            if ch.get("tvg_name"):
-                attrs.append(f'tvg-name="{ch["tvg_name"]}"')
-            if ch.get("tvg_logo"):
-                attrs.append(f'tvg-logo="{ch["tvg_logo"]}"')
-            if ch.get("group_title"):
-                attrs.append(f'group-title="{ch["group_title"]}"')
-
+            if ch.get("tvg_id"):    attrs.append(f'tvg-id="{ch["tvg_id"]}"')
+            if ch.get("tvg_name"):  attrs.append(f'tvg-name="{ch["tvg_name"]}"')
+            if ch.get("tvg_logo"):  attrs.append(f'tvg-logo="{ch["tvg_logo"]}"')
+            if ch.get("group_title"): attrs.append(f'group-title="{ch["group_title"]}"')
             attr_str = " ".join(attrs)
-            if attr_str:
-                f.write(f'#EXTINF:-1 {attr_str},{ch["name"]}\n')
-            else:
-                f.write(f'#EXTINF:-1,{ch["name"]}\n')
+            f.write(f'#EXTINF:-1 {attr_str},{ch["name"]}\n' if attr_str else f'#EXTINF:-1,{ch["name"]}\n')
             f.write(f'{ch["url"]}\n')
-    print(f"  ✓ 生成: {path} ({len(channels)} 个频道)")
+    print(f"  ✓ {path} ({len(channels)} 个频道)", flush=True)
 
 
-def categorize_channels(channels):
-    """按 group_title 或频道名分类"""
-    cctv = []
-    ws = []
-    other = []
-    cctv_kw = {"央视", "cctv", "CCTV"}
-    ws_kw = {"卫视", "东南", "湖南", "浙江", "江苏", "北京", "东方", "广东",
-             "深圳", "天津", "重庆", "山东", "安徽", "江西", "福建",
-             "深圳", "哈尔滨", "辽宁", "黑龙江", "旅游", "海南", "河北",
-             "河南", "湖北", "广西", "四川", "贵州", "云南", "陕西",
-             "甘肃", "宁夏", "青海", "西藏", "新疆", "内蒙古",
-             "卫视", "Sichuan", "Guangdong", "Jiangsu", "Zhejiang"}
-
+def categorize(channels):
+    cctv, ws, other = [], [], []
     for ch in channels:
         grp = ch.get("group_title", "")
         name = ch["name"]
-        # 先看 group_title
-        if any(k in grp for k in cctv_kw):
+        if "央视" in grp or "CCTV" in grp or "CCTV" in name or "cctv" in name:
             cctv.append(ch)
-        elif any(k in name for k in ("CCTV", "cctv", "央视")):
-            cctv.append(ch)
-        elif any(k in grp for k in ws_kw):
-            ws.append(ch)
-        elif any(k in name for k in ws_kw):
+        elif "卫视" in grp or any(k in name for k in ("卫视", "东南", "湖南", "浙江", "江苏",
+                    "北京", "东方", "广东", "深圳", "天津", "重庆", "山东",
+                    "安徽", "江西", "福建", "四川", "贵州", "云南", "陕西",
+                    "辽宁", "黑龙江", "湖北", "河南", "海南", "河北", "广西")):
             ws.append(ch)
         else:
             other.append(ch)
     return cctv, ws, other
 
 
-import sys
+def sort_key(ch):
+    name = ch["name"]
+    m = re.search(r'(\d+)', name)
+    num = int(m.group(1)) if m else 999
+    return (not bool(m), num, name)
+
 
 def main():
     print("=" * 55, flush=True)
-    print("  IPTV Source Auto-Fetch v3", flush=True)
-    print("  保留台标/分组/中文名", flush=True)
+    print("  IPTV Source Auto-Fetch v4", flush=True)
+    print("  存活检测 + 仅保留可播源", flush=True)
     print("=" * 55, flush=True)
-    print(flush=True)
 
     # Step 1: 获取源
-    print("[Step 1] 获取源...")
+    print("\n[Step 1] 获取源...", flush=True)
     all_lines = []
     for name, url in SOURCES.items():
-        lines = fetch_m3u(name, url)
-        all_lines.extend(lines)
-    print(f"\n  共获取 {len(all_lines)} 行原始数据")
+        all_lines.extend(fetch_m3u(name, url))
+    print(f"\n  共 {len(all_lines)} 行原始数据", flush=True)
 
-    # Step 2: 解析频道
-    print("\n[Step 2] 解析频道...")
+    # Step 2: 解析
+    print("\n[Step 2] 解析频道...", flush=True)
     channels = parse_m3u(all_lines)
-    print(f"  解析出 {len(channels)} 个频道")
+    print(f"  解析出 {len(channels)} 个频道", flush=True)
 
     # Step 3: 去重
-    print("\n[Step 3] 去重...")
     channels = deduplicate(channels)
-    print(f"  去重后 {len(channels)} 个")
+    print(f"  去重后 {len(channels)} 个", flush=True)
 
-    if len(channels) == 0:
-        print("\n  ❌ 没有解析到任何频道，请检查源是否可访问")
-        return
+    # Step 4: 加入已知可用回退源
+    print("\n[Step 3] 加入已知可用源...", flush=True)
+    channels = add_fallback(channels)
+    print(f"  加入后共 {len(channels)} 个", flush=True)
 
-    # Step 4: 存活检测（可选跳过）
-    print("\n[Step 4] 存活检测...")
-    # 先不启用存活检测，保留全部频道
-    valid = channels
+    # Step 5: 存活检测（并发）
+    print("\n[Step 4] 存活检测...", flush=True)
+    print(f"  测试 {len(channels)} 个频道...", flush=True)
+    valid = []
 
-    # Step 5: 分类
-    print("\n[Step 5] 分类...")
-    cctv, ws, other = categorize_channels(valid)
-    print(f"  CCTV类: {len(cctv)}, 卫视类: {len(ws)}, 其他: {len(other)}")
+    def check(ch):
+        return (health_check(ch), ch)
 
-    # 按名称排序
-    def sort_key(ch):
-        name = ch["name"]
-        # 数字优先
-        m = re.search(r'(\d+)', name)
-        num = int(m.group(1)) if m else 999
-        return (not bool(m), num, name)
+    with ThreadPoolExecutor(max_workers=30) as ex:
+        futures = {ex.submit(check, ch): ch["name"] for ch in channels}
+        done = 0
+        for future in as_completed(futures):
+            name = futures[future]
+            done += 1
+            try:
+                alive, ch = future.result(timeout=8)
+                if alive:
+                    valid.append(ch)
+            except Exception:
+                pass  # 超时/异常的视为不可播
+            if done % 30 == 0 or done == len(channels):
+                print(f"    {done}/{len(channels)}... ✅{len(valid)}", flush=True)
+    print(f"\n  ✅ 可播: {len(valid)}/{len(channels)}", flush=True)
+
+    if len(valid) == 0:
+        print("\n  ❌ 全部不可播！", flush=True)
+        # 至少输出 fallback
+        valid = [{"name": n, "url": u, "tvg_id": "", "tvg_name": n,
+                   "tvg_logo": l, "group_title": g}
+                 for n, u, g, l in FALLBACK]
+
+    # Step 6: 分类
+    print("\n[Step 5] 分类...", flush=True)
+    cctv, ws, other = categorize(valid)
+    print(f"  CCTV: {len(cctv)}, 卫视: {len(ws)}, 其他: {len(other)}", flush=True)
 
     for lst in [valid, cctv, ws, other]:
         lst.sort(key=sort_key)
 
-    # Step 6: 生成文件
-    print("\n[Step 6] 生成文件...")
-    generate_m3u(valid, OUTPUT_DIR / "live.m3u")
-    generate_m3u(cctv, OUTPUT_DIR / "cctv.m3u")
-    generate_m3u(ws, OUTPUT_DIR / "weishi.m3u")
+    # Step 7: 生成文件
+    print("\n[Step 6] 生成文件...", flush=True)
+    gen_m3u(valid, OUTPUT_DIR / "live.m3u")
+    gen_m3u(cctv, OUTPUT_DIR / "cctv.m3u")
+    gen_m3u(ws, OUTPUT_DIR / "weishi.m3u")
 
-    # 生成 JSON
     with open(OUTPUT_DIR / "channels.json", "w", encoding="utf-8") as f:
         json.dump(valid, f, ensure_ascii=False, indent=2)
 
-    # 统计
     with_logo = sum(1 for ch in valid if ch.get("tvg_logo"))
     with_group = sum(1 for ch in valid if ch.get("group_title"))
-    print(f"\n  📊 元数据统计:")
-    print(f"     有台标(tvg-logo): {with_logo}/{len(valid)}")
-    print(f"     有分组(group-title): {with_group}/{len(valid)}")
-
-    print("\n" + "=" * 55)
-    print(f"  ✅ 完成! 共 {len(valid)} 个频道")
-    print(f"     ├ CCTV: {len(cctv)}")
-    print(f"     ├ 卫视: {len(ws)}")
-    print(f"     └ 其他: {len(other)}")
-    print("=" * 55)
+    print(f"\n  📊 统计: {len(valid)} 频道, 台标 {with_logo}, 分组 {with_group}", flush=True)
+    print("=" * 55, flush=True)
 
 
 if __name__ == "__main__":
