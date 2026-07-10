@@ -1,76 +1,18 @@
 #EXTM3U
 # Generated: IPTV Auto-Fetch v4 
-# Date: 2026-07-10 14:03
-# Total: 41 channels
+# Date: 2026-07-10 19:17
+# Total: 12 channels
 
-#EXTINF:-1 tvg-id="YunnanSatelliteTV.cn@SD",云南卫视 (576p)
-http://183.207.248.71/gitv/live1/G_YUNNAN/G_YUNNAN
-#EXTINF:-1 tvg-id="YunnanSatelliteTV.cn@SD",云南卫视 (576p) [Not 24/7]
-http://183.207.248.71/cntv/live1/yunnanstv/yunnanstv
-#EXTINF:-1,内蒙古卫视 (576p)
-http://183.207.248.71/gitv/live1/G_NEIMENGGU/G_NEIMENGGU
-#EXTINF:-1 tvg-id="SichuanSatelliteTV.cn@SD",四川卫视 (576p)
-http://183.207.248.71/gitv/live1/SCWS/SCWS
-#EXTINF:-1 tvg-id="NingxiaSatelliteChannel.cn@SD",宁夏卫视 (576p) [Not 24/7]
-http://183.207.248.71/gitv/live1/G_NINGXIA/G_NINGXIA
-#EXTINF:-1 tvg-id="ShandongTV.cn@SD",山东卫视 (576p)
-http://183.207.248.71/gitv/live1/SDWS/SDWS
-#EXTINF:-1,新疆卫视 (576p)
-http://183.207.248.71/cntv/live1/xinjiangstv/xinjiangstv
-#EXTINF:-1,新疆卫视 (576p)
-http://183.207.248.71/gitv/live1/G_XINJIANG/G_XINJIANG
-#EXTINF:-1 tvg-id="JiangsuSportsLeisureChannel.cn@SD",江苏体育 (576p)
-http://183.207.248.71/gitv/live1/G_JSTY/G_JSTY
-#EXTINF:-1 tvg-id="JiangsuPublicNewsChannel.cn@SD",江苏公共 (576p)
-http://183.207.248.71/gitv/live1/G_JSGG/G_JSGG
-#EXTINF:-1 tvg-id="JiangsuSatelliteTV.cn@SD",江苏卫视 (576p)
-http://183.207.248.71/gitv/live1/JSWS-HD/JSWS-HD
-#EXTINF:-1 tvg-id="JiangsuCityChannel.cn@SD",江苏城市 (576p)
-http://183.207.248.71/gitv/live1/G_JSCS/G_JSCS
-#EXTINF:-1 tvg-id="JiangsuMovieChannel.cn@SD",江苏影视 (576p) [Not 24/7]
-http://183.207.248.71/gitv/live1/G_JSYS/G_JSYS
-#EXTINF:-1 tvg-id="JiangsuEducationalChannel.cn@SD",江苏教育 (576p) [Not 24/7]
-http://183.207.248.71/gitv/live1/G_JSJY/G_JSJY
-#EXTINF:-1 tvg-id="JiangsuVarietyChannel.cn@SD",江苏综艺 (576p) [Not 24/7]
-http://183.207.248.71/gitv/live1/G_JSZY/G_JSZY
-#EXTINF:-1 tvg-id="JiangxiTV.cn@SD",江西卫视 (576p)
-http://183.207.248.71/gitv/live1/JXWS/JXWS
 #EXTINF:-1,浙江 Ⅰ 绍兴综合 (576p)
 http://live.shaoxing.com.cn/video/s10001-sxtv1/index.m3u8
-#EXTINF:-1 tvg-id="ZhejiangSatelliteTV.cn@SD",浙江卫视 (576p)
-http://183.207.248.71/gitv/live1/G_ZHEJIANG/G_ZHEJIANG
-#EXTINF:-1 tvg-id="GuizhouTV.cn@SD",贵州卫视 (576p)
-http://183.207.248.71/gitv/live1/G_GUIZHOU/G_GUIZHOU
 #EXTINF:-1 tvg-id="LiaoningTV.cn@SD",辽宁卫视 (576p)
 http://183.207.249.71/PLTV/3/224/3221225566/index.m3u8
-#EXTINF:-1 tvg-id="LiaoningTV.cn@SD",辽宁卫视 (576p)
-http://183.207.248.71/cntv/live1/liaoningstv/liaoningstv
-#EXTINF:-1 tvg-id="HeilongjiangTV.cn@SD",黑龙江 (576p)
-http://183.207.248.71/gitv/live1/G_HEILONGJIANG/G_HEILONGJIANG
 #EXTINF:-1,浙江 Ⅰ 绍兴影视 (720p)
 http://live.shaoxing.com.cn/video/s10001-sxtv3/index.m3u8
 #EXTINF:-1 tvg-id="BeijingSatelliteTV.cn@HD",BRTV 北京卫视 (1080p)
 http://go.bkpcp.top/mg/bjws
 #EXTINF:-1,四川 Ⅰ 巴中综合台 (1080p) [Not 24/7]
 http://30814.hlsplay.aodianyun.com/lms_30814/tv_channel_246.flv
-#EXTINF:-1 tvg-id="TianjinTV.cn@SD",天津卫视 (1080p)
-http://183.207.248.71/cntv/live1/HD-2500k-1080P-tianjinstv/HD-2500k-1080P-tianjinstv
-#EXTINF:-1 tvg-id="ShandongTV.cn@SD",山东卫视 (1080p)
-http://183.207.248.71/cntv/live1/HD-2500k-1080P-shandongstv/HD-2500k-1080P-shandongstv
-#EXTINF:-1 tvg-id="JiangsuSatelliteTV.cn@SD",江苏卫视 (1080p)
-http://183.207.248.71/cntv/live1/jiangsustv/jiangsustv
-#EXTINF:-1 tvg-id="JiangsuSatelliteTV.cn@SD",江苏卫视 (1080p) [Not 24/7]
-http://183.207.248.71/cntv/live1/HD-2500k-1080P-jiangsustv/HD-2500k-1080P-jiangsustv
-#EXTINF:-1 tvg-id="JiangxiTV.cn@SD",江西卫视 (1080p)
-http://183.207.248.71/cntv/live1/jiangxistv/jiangxistv
-#EXTINF:-1 tvg-id="ZhejiangSatelliteTV.cn@SD",浙江卫视 (1080p)
-http://183.207.248.71/cntv/live1/zhejiangstv/zhejiangstv
-#EXTINF:-1 tvg-id="ZhejiangSatelliteTV.cn@SD",浙江卫视 (1080p)
-http://183.207.248.71/cntv/live1/HD-2500k-1080P-zhejiangstv/HD-2500k-1080P-zhejiangstv
-#EXTINF:-1 tvg-id="ShenzhenSatelliteTV.cn@SD",深圳卫视 (1080p) [Not 24/7]
-http://183.207.248.71/cntv/live1/HD-2500k-1080P-shenzhenstv/HD-2500k-1080P-shenzhenstv
-#EXTINF:-1,黑龙江卫 (1080p)
-http://183.207.248.71/cntv/live1/HD-2500k-1080P-heilongjiangstv/HD-2500k-1080P-heilongjiangstv
 #EXTINF:-1,浙江国际
 https://ali-m-l.cztv.com/channels/lantian/channel010/1080p.m3u8
 #EXTINF:-1 tvg-name="浙江少儿" tvg-logo="https://live.fanmingming.cn/tv/浙江少儿.png" group-title="浙江频道",浙江少儿
