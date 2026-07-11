@@ -32,14 +32,6 @@
     "group_title": "央视频道"
   },
   {
-    "name": "上虞1新闻综合 (720p) [Not 24/7]",
-    "url": "https://l.cztvcloud.com/channels/lantian/SXshangyu1/720p.m3u8",
-    "tvg_id": "",
-    "tvg_name": "",
-    "tvg_logo": "",
-    "group_title": ""
-  },
-  {
     "name": "福州广播电视台新闻综合频道 (FZTV-1) (1080p)",
     "url": "http://live.zohi.tv/video/s10001-fztv-1/index.m3u8",
     "tvg_id": "",
@@ -73,7 +65,7 @@
   },
   {
     "name": "Xinjiang TV 3",
-    "url": "http://120.70.60.179:9901/tsfile/live/1006_1.m3u8?authid=0&key=txiptv&playlive=1",
+    "url": "http://110.153.180.106:55555/out_2/index.m3u8",
     "tvg_id": "XinjiangTV3.cn@SD",
     "tvg_name": "",
     "tvg_logo": "",
@@ -81,7 +73,7 @@
   },
   {
     "name": "Xinjiang TV 3",
-    "url": "http://110.153.180.106:55555/out_2/index.m3u8",
+    "url": "http://120.70.60.179:9901/tsfile/live/1006_1.m3u8?authid=0&key=txiptv&playlive=1",
     "tvg_id": "XinjiangTV3.cn@SD",
     "tvg_name": "",
     "tvg_logo": "",
@@ -91,14 +83,6 @@
     "name": "Xinjiang TV 3",
     "url": "http://218.84.35.38:3000/m3u8/live/tctv-2/index.m3u8",
     "tvg_id": "XinjiangTV3.cn@SD",
-    "tvg_name": "",
-    "tvg_logo": "",
-    "group_title": ""
-  },
-  {
-    "name": "上虞3新商都 (720p) [Not 24/7]",
-    "url": "https://l.cztvcloud.com/channels/lantian/SXshangyu3/720p.m3u8",
-    "tvg_id": "",
     "tvg_name": "",
     "tvg_logo": "",
     "group_title": ""
@@ -344,22 +328,6 @@
     "group_title": ""
   },
   {
-    "name": "余姚姚江文化 (576p)",
-    "url": "https://l.cztvcloud.com/channels/lantian/SXyuyao3/720p.m3u8",
-    "tvg_id": "",
-    "tvg_name": "",
-    "tvg_logo": "",
-    "group_title": ""
-  },
-  {
-    "name": "余姚新闻综合 (576p)",
-    "url": "https://l.cztvcloud.com/channels/lantian/SXyuyao1/720p.m3u8",
-    "tvg_id": "",
-    "tvg_name": "",
-    "tvg_logo": "",
-    "group_title": ""
-  },
-  {
     "name": "内蒙古卫视 (576p)",
     "url": "http://183.207.248.71/gitv/live1/G_NEIMENGGU/G_NEIMENGGU",
     "tvg_id": "",
@@ -409,7 +377,7 @@
   },
   {
     "name": "新疆卫视 (576p)",
-    "url": "http://183.207.248.71/cntv/live1/xinjiangstv/xinjiangstv",
+    "url": "http://183.207.248.71/gitv/live1/G_XINJIANG/G_XINJIANG",
     "tvg_id": "",
     "tvg_name": "",
     "tvg_logo": "",
@@ -417,7 +385,7 @@
   },
   {
     "name": "新疆卫视 (576p)",
-    "url": "http://183.207.248.71/gitv/live1/G_XINJIANG/G_XINJIANG",
+    "url": "http://183.207.248.71/cntv/live1/xinjiangstv/xinjiangstv",
     "tvg_id": "",
     "tvg_name": "",
     "tvg_logo": "",
@@ -600,32 +568,8 @@
     "group_title": ""
   },
   {
-    "name": "嵊州综合 (720p) [Not 24/7]",
-    "url": "https://l.cztvcloud.com/channels/lantian/SXshengzhou1/720p.m3u8",
-    "tvg_id": "",
-    "tvg_name": "",
-    "tvg_logo": "",
-    "group_title": ""
-  },
-  {
     "name": "浙江 Ⅰ 绍兴影视 (720p)",
     "url": "http://live.shaoxing.com.cn/video/s10001-sxtv3/index.m3u8",
-    "tvg_id": "",
-    "tvg_name": "",
-    "tvg_logo": "",
-    "group_title": ""
-  },
-  {
-    "name": "萧山新闻综合 (720p) [Not 24/7]",
-    "url": "https://l.cztvcloud.com/channels/lantian/SXxiaoshan1/720p.m3u8",
-    "tvg_id": "",
-    "tvg_name": "",
-    "tvg_logo": "",
-    "group_title": ""
-  },
-  {
-    "name": "蕭山生活頻道 (720p) [Not 24/7]",
-    "url": "https://l.cztvcloud.com/channels/lantian/SXxiaoshan2/720p.m3u8",
     "tvg_id": "",
     "tvg_name": "",
     "tvg_logo": "",
@@ -722,30 +666,6 @@
   {
     "name": "完美游戏 (1080p) [Not 24/7]",
     "url": "http://183.207.248.71/cntv/live1/wmyx/wmyx",
-    "tvg_id": "",
-    "tvg_name": "",
-    "tvg_logo": "",
-    "group_title": ""
-  },
-  {
-    "name": "山东卫视 (1080p)",
-    "url": "http://183.207.248.71/cntv/live1/HD-2500k-1080P-shandongstv/HD-2500k-1080P-shandongstv",
-    "tvg_id": "ShandongTV.cn@SD",
-    "tvg_name": "",
-    "tvg_logo": "",
-    "group_title": ""
-  },
-  {
-    "name": "新昌休闲影视 (1080p) [Not 24/7]",
-    "url": "https://l.cztvcloud.com/channels/lantian/SXxinchang2/720p.m3u8",
-    "tvg_id": "",
-    "tvg_name": "",
-    "tvg_logo": "",
-    "group_title": ""
-  },
-  {
-    "name": "新昌新聞綜合 (1080p) [Not 24/7]",
-    "url": "https://l.cztvcloud.com/channels/lantian/SXxinchang1/720p.m3u8",
     "tvg_id": "",
     "tvg_name": "",
     "tvg_logo": "",
@@ -854,6 +774,14 @@
     "tvg_name": "CGTN英语",
     "tvg_logo": "https://live.fanmingming.cn/tv/CGTN.png",
     "group_title": "央视频道"
+  },
+  {
+    "name": "CND Film Middle School Channel",
+    "url": "http://live-play.zxstv.com.cn/zhongxuesheng/zhongxuesheng.m3u8",
+    "tvg_id": "CNDFilmMiddleSchoolChannel.cn@SD",
+    "tvg_name": "",
+    "tvg_logo": "",
+    "group_title": ""
   },
   {
     "name": "Chifeng Comprehensive News Chanel",
