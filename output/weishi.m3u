@@ -1,6 +1,6 @@
 #EXTM3U
 # Generated: IPTV Auto-Fetch v4 
-# Date: 2026-07-12 12:59
+# Date: 2026-07-12 18:53
 # Total: 40 channels
 
 #EXTINF:-1 tvg-id="YunnanSatelliteTV.cn@SD",云南卫视 (576p)
@@ -21,8 +21,8 @@ http://183.207.248.71/cntv/live1/xinjiangstv/xinjiangstv
 http://183.207.248.71/gitv/live1/G_XINJIANG/G_XINJIANG
 #EXTINF:-1 tvg-id="JiangsuSportsLeisureChannel.cn@SD",江苏体育 (576p)
 http://183.207.248.71/gitv/live1/G_JSTY/G_JSTY
-#EXTINF:-1 tvg-id="JiangsuSatelliteTV.cn@SD",江苏卫视 (576p)
-http://183.207.248.71/gitv/live1/JSWS-HD/JSWS-HD
+#EXTINF:-1 tvg-id="JiangsuPublicNewsChannel.cn@SD",江苏公共 (576p)
+http://183.207.248.71/gitv/live1/G_JSGG/G_JSGG
 #EXTINF:-1 tvg-id="JiangsuCityChannel.cn@SD",江苏城市 (576p)
 http://183.207.248.71/gitv/live1/G_JSCS/G_JSCS
 #EXTINF:-1 tvg-id="JiangsuMovieChannel.cn@SD",江苏影视 (576p) [Not 24/7]
