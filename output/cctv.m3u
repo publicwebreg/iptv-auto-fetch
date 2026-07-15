@@ -1,14 +1,14 @@
 #EXTM3U
 # Generated: IPTV Auto-Fetch v4 
-# Date: 2026-07-15 07:53
+# Date: 2026-07-15 13:16
 # Total: 27 channels
 
 #EXTINF:-1 tvg-id="CCTV1.cn@SD" tvg-name="CCTV-1综合" tvg-logo="https://live.fanmingming.cn/tv/CCTV1.png" group-title="央视频道",CCTV-1
 https://liveplay-srs.voc.com.cn/hls/tv/134_180adf.m3u8
 #EXTINF:-1 tvg-id="CCTV1.cn@HD" tvg-name="CCTV-1综合" tvg-logo="https://live.fanmingming.cn/tv/CCTV1.png" group-title="央视频道",CCTV-1 (1080p)
-http://198.204.240.250:82/live/cctv1.m3u8
-#EXTINF:-1 tvg-id="CCTV1.cn@HD" tvg-name="CCTV-1综合" tvg-logo="https://live.fanmingming.cn/tv/CCTV1.png" group-title="央视频道",CCTV-1 (1080p)
 http://69.30.245.50/live/cctv1.m3u8
+#EXTINF:-1 tvg-id="CCTV1.cn@HD" tvg-name="CCTV-1综合" tvg-logo="https://live.fanmingming.cn/tv/CCTV1.png" group-title="央视频道",CCTV-1 (1080p)
+http://198.204.240.250:82/live/cctv1.m3u8
 #EXTINF:-1 tvg-id="CCTV1.cn@SD" tvg-name="CCTV-1综合" tvg-logo="https://live.fanmingming.cn/tv/CCTV1.png" group-title="央视频道",CCTV-1 (720p)
 http://74.91.26.218:82/live/cctv1hd.m3u8
 #EXTINF:-1 tvg-id="CCTV2.cn@SD" tvg-name="CCTV-2财经" tvg-logo="https://live.fanmingming.cn/tv/CCTV2.png" group-title="央视频道",CCTV-2 (720p)
@@ -28,9 +28,9 @@ http://74.91.26.218:82/live/cctv7hd.m3u8
 #EXTINF:-1 tvg-id="CCTV8.cn@SD" tvg-name="CCTV-8电视剧" tvg-logo="https://live.fanmingming.cn/tv/CCTV8.png" group-title="央视频道",CCTV-8 (720p)
 http://74.91.26.218:82/live/cctv8hd.m3u8
 #EXTINF:-1 tvg-id="CCTV8K.cn@HD" tvg-name="CCTV-8K" group-title="央视频道",CCTV-8K (1080p)
-http://198.204.240.250:82/live/cctv8k.m3u8
-#EXTINF:-1 tvg-id="CCTV8K.cn@HD" tvg-name="CCTV-8K" group-title="央视频道",CCTV-8K (1080p)
 http://192.151.150.154/live/cctv8k.m3u8
+#EXTINF:-1 tvg-id="CCTV8K.cn@HD" tvg-name="CCTV-8K" group-title="央视频道",CCTV-8K (1080p)
+http://198.204.240.250:82/live/cctv8k.m3u8
 #EXTINF:-1 tvg-id="CCTV9.cn@SD" tvg-name="CCTV-9纪录" tvg-logo="https://live.fanmingming.cn/tv/CCTV9.png" group-title="央视频道",CCTV-9 (576i)
 https://xykt-fix.github.io/Y77.m3u8
 #EXTINF:-1 tvg-id="CCTV10.cn@SD" tvg-name="CCTV-10科教" tvg-logo="https://live.fanmingming.cn/tv/CCTV10.png" group-title="央视频道",CCTV-10 (720p)
