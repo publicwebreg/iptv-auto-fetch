@@ -1,6 +1,6 @@
 #EXTM3U
 # Generated: IPTV Auto-Fetch v4 
-# Date: 2026-07-20 13:50
+# Date: 2026-07-20 19:27
 # Total: 41 channels
 
 #EXTINF:-1 tvg-id="YunnanSatelliteTV.cn@SD",云南卫视 (576p)
@@ -42,9 +42,9 @@ http://183.207.248.71/gitv/live1/G_ZHEJIANG/G_ZHEJIANG
 #EXTINF:-1 tvg-id="GuizhouTV.cn@SD",贵州卫视 (576p)
 http://183.207.248.71/gitv/live1/G_GUIZHOU/G_GUIZHOU
 #EXTINF:-1 tvg-id="LiaoningTV.cn@SD",辽宁卫视 (576p)
-http://183.207.249.71/PLTV/3/224/3221225566/index.m3u8
-#EXTINF:-1 tvg-id="LiaoningTV.cn@SD",辽宁卫视 (576p)
 http://183.207.248.71/cntv/live1/liaoningstv/liaoningstv
+#EXTINF:-1 tvg-id="LiaoningTV.cn@SD",辽宁卫视 (576p)
+http://183.207.249.71/PLTV/3/224/3221225566/index.m3u8
 #EXTINF:-1 tvg-id="HeilongjiangTV.cn@SD",黑龙江 (576p)
 http://183.207.248.71/gitv/live1/G_HEILONGJIANG/G_HEILONGJIANG
 #EXTINF:-1,浙江 Ⅰ 绍兴影视 (720p)
