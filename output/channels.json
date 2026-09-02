@@ -209,7 +209,7 @@
   },
   {
     "name": "CCTV-8K (1080p)",
-    "url": "http://192.151.150.154/live/cctv8k.m3u8",
+    "url": "http://198.204.240.250:82/live/cctv8k.m3u8",
     "tvg_id": "CCTV8K.cn@HD",
     "tvg_name": "CCTV-8K",
     "tvg_logo": "",
@@ -217,7 +217,7 @@
   },
   {
     "name": "CCTV-8K (1080p)",
-    "url": "http://198.204.240.250:82/live/cctv8k.m3u8",
+    "url": "http://192.151.150.154/live/cctv8k.m3u8",
     "tvg_id": "CCTV8K.cn@HD",
     "tvg_name": "CCTV-8K",
     "tvg_logo": "",
@@ -346,6 +346,14 @@
   {
     "name": "靖江新闻綜合 (480p) [Not 24/7]",
     "url": "http://visit.jjbctv.com:1935/live/xwzhmb/playlist.m3u8",
+    "tvg_id": "",
+    "tvg_name": "",
+    "tvg_logo": "",
+    "group_title": ""
+  },
+  {
+    "name": "河源综合 (540p)",
+    "url": "https://tmpstream.hyrtv.cn/xwzh/sd/live.m3u8",
     "tvg_id": "",
     "tvg_name": "",
     "tvg_logo": "",
@@ -552,6 +560,14 @@
     "group_title": ""
   },
   {
+    "name": "餘姚姚江文化 (576p) [Not 24/7]",
+    "url": "https://l.cztvcloud.com/channels/lantian/SXyuyao2/720p.m3u8",
+    "tvg_id": "",
+    "tvg_name": "",
+    "tvg_logo": "",
+    "group_title": ""
+  },
+  {
     "name": "黑龙江 (576p)",
     "url": "http://183.207.248.71/gitv/live1/G_HEILONGJIANG/G_HEILONGJIANG",
     "tvg_id": "HeilongjiangTV.cn@SD",
@@ -576,6 +592,14 @@
     "group_title": ""
   },
   {
+    "name": "上虞經濟文化 (720p) [Not 24/7]",
+    "url": "https://l.cztvcloud.com/channels/lantian/SXshangyu2/720p.m3u8",
+    "tvg_id": "",
+    "tvg_name": "",
+    "tvg_logo": "",
+    "group_title": ""
+  },
+  {
     "name": "家有购物 (720p) [Not 24/7]",
     "url": "http://183.207.248.71/cntv/live1/SD-1500k-576P-jiayougw/SD-1500k-576P-jiayougw",
     "tvg_id": "",
@@ -592,8 +616,8 @@
     "group_title": ""
   },
   {
-    "name": "蕭山生活頻道 (720p) [Not 24/7]",
-    "url": "https://l.cztvcloud.com/channels/lantian/SXxiaoshan2/720p.m3u8",
+    "name": "萧山新闻综合 (720p) [Not 24/7]",
+    "url": "https://l.cztvcloud.com/channels/lantian/SXxiaoshan1/720p.m3u8",
     "tvg_id": "",
     "tvg_name": "",
     "tvg_logo": "",
@@ -728,14 +752,6 @@
     "group_title": ""
   },
   {
-    "name": "宿州公共 (1080p) [Not 24/7]",
-    "url": "http://live.ahsz.tv/video/s10001-ggpd/index.m3u8",
-    "tvg_id": "",
-    "tvg_name": "",
-    "tvg_logo": "",
-    "group_title": ""
-  },
-  {
     "name": "宿州新闻综合 (1080p) [Not 24/7]",
     "url": "http://live.ahsz.tv/video/s10001-szzh/index.m3u8",
     "tvg_id": "",
@@ -760,8 +776,8 @@
     "group_title": ""
   },
   {
-    "name": "新昌休闲影视 (1080p) [Not 24/7]",
-    "url": "https://l.cztvcloud.com/channels/lantian/SXxinchang2/720p.m3u8",
+    "name": "新昌新聞綜合 (1080p) [Not 24/7]",
+    "url": "https://l.cztvcloud.com/channels/lantian/SXxinchang1/720p.m3u8",
     "tvg_id": "",
     "tvg_name": "",
     "tvg_logo": "",
