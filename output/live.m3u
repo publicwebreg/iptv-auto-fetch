@@ -1,14 +1,14 @@
 #EXTM3U
 # Generated: IPTV Auto-Fetch v4 
-# Date: 2026-09-04 02:09
-# Total: 148 channels
+# Date: 2026-09-04 10:13
+# Total: 150 channels
 
 #EXTINF:-1 tvg-id="CCTV1.cn@SD" tvg-name="CCTV-1综合" tvg-logo="https://live.fanmingming.cn/tv/CCTV1.png" group-title="央视频道",CCTV-1
 https://liveplay-srs.voc.com.cn/hls/tv/134_180adf.m3u8
 #EXTINF:-1 tvg-id="CCTV1.cn@HD" tvg-name="CCTV-1综合" tvg-logo="https://live.fanmingming.cn/tv/CCTV1.png" group-title="央视频道",CCTV-1 (1080p)
-http://198.204.240.250:82/live/cctv1.m3u8
-#EXTINF:-1 tvg-id="CCTV1.cn@HD" tvg-name="CCTV-1综合" tvg-logo="https://live.fanmingming.cn/tv/CCTV1.png" group-title="央视频道",CCTV-1 (1080p)
 http://69.30.245.50/live/cctv1.m3u8
+#EXTINF:-1 tvg-id="CCTV1.cn@HD" tvg-name="CCTV-1综合" tvg-logo="https://live.fanmingming.cn/tv/CCTV1.png" group-title="央视频道",CCTV-1 (1080p)
+http://198.204.240.250:82/live/cctv1.m3u8
 #EXTINF:-1 tvg-id="CCTV1.cn@SD" tvg-name="CCTV-1综合" tvg-logo="https://live.fanmingming.cn/tv/CCTV1.png" group-title="央视频道",CCTV-1 (720p)
 http://74.91.26.218:82/live/cctv1hd.m3u8
 #EXTINF:-1 tvg-id="QTV1.cn@SD",QTV-1
@@ -35,6 +35,8 @@ http://video10.qtv.com.cn/drm/qtv3at/manifest.m3u8
 http://110.153.180.106:55555/out_2/index.m3u8
 #EXTINF:-1 tvg-id="XinjiangTV3.cn@SD",Xinjiang TV 3
 http://218.84.35.38:3000/m3u8/live/tctv-2/index.m3u8
+#EXTINF:-1 tvg-id="XinjiangTV3.cn@SD",Xinjiang TV 3
+https://st-video.xjmty.com/fs/livedit/e55abfa37af26e19/8ce9971c2177b3dd.m3u8
 #EXTINF:-1,上虞3新商都 (720p) [Not 24/7]
 https://l.cztvcloud.com/channels/lantian/SXshangyu3/720p.m3u8
 #EXTINF:-1,福州广播电视台都市生活频道 (FZTV-3) (1080p)
@@ -43,14 +45,14 @@ http://live.zohi.tv/video/s10001-fztv-3/index.m3u8
 http://74.91.26.218:82/live/cctv4hd.m3u8
 #EXTINF:-1 tvg-id="CCTV4K.cn@HD" tvg-name="CCTV-4K" group-title="央视频道",CCTV-4K (1080p)
 http://198.204.240.250:82/live/cctv4k.m3u8
-#EXTINF:-1 tvg-id="QTV4.cn@SD",QTV-4
-http://video10.qtv.com.cn/drm/qtv4at/manifest.m3u8
 #EXTINF:-1 tvg-id="CCTV5Plus.cn@SD",CCTV-5+
 https://myip.pdtvhd.com/Sports/streams/CCTV5pul.m3u8
 #EXTINF:-1 tvg-id="CCTV6.cn@HD" tvg-name="CCTV-6电影" tvg-logo="https://live.fanmingming.cn/tv/CCTV6.png" group-title="央视频道",CCTV-6 (1080p)
-http://69.30.245.50/live/cctv6.m3u8
-#EXTINF:-1 tvg-id="CCTV6.cn@HD" tvg-name="CCTV-6电影" tvg-logo="https://live.fanmingming.cn/tv/CCTV6.png" group-title="央视频道",CCTV-6 (1080p)
 http://198.204.240.250:82/live/cctv6.m3u8
+#EXTINF:-1 tvg-id="CCTV6.cn@HD" tvg-name="CCTV-6电影" tvg-logo="https://live.fanmingming.cn/tv/CCTV6.png" group-title="央视频道",CCTV-6 (1080p)
+http://69.30.245.50/live/cctv6.m3u8
+#EXTINF:-1 tvg-id="QTV6.cn@SD",QTV-6
+http://video10.qtv.com.cn/drm/qtv6at/manifest.m3u8
 #EXTINF:-1 tvg-id="CCTV7.cn@SD" tvg-name="CCTV-7国防军事" tvg-logo="https://live.fanmingming.cn/tv/CCTV7.png" group-title="央视频道",CCTV-7 (720p)
 http://74.91.26.218:82/live/cctv7hd.m3u8
 #EXTINF:-1 tvg-id="CCTV8.cn@SD" tvg-name="CCTV-8电视剧" tvg-logo="https://live.fanmingming.cn/tv/CCTV8.png" group-title="央视频道",CCTV-8 (720p)
@@ -99,6 +101,8 @@ http://183.207.248.71/gitv/live1/G_YUNNAN/G_YUNNAN
 http://183.207.248.71/cntv/live1/yunnanstv/yunnanstv
 #EXTINF:-1,余姚姚江文化 (576p)
 https://l.cztvcloud.com/channels/lantian/SXyuyao3/720p.m3u8
+#EXTINF:-1,余姚新闻综合 (576p)
+https://l.cztvcloud.com/channels/lantian/SXyuyao1/720p.m3u8
 #EXTINF:-1,内蒙古卫视 (576p)
 http://183.207.248.71/gitv/live1/G_NEIMENGGU/G_NEIMENGGU
 #EXTINF:-1,南京十八 (576p)
@@ -142,9 +146,11 @@ http://123.146.162.24:8017/c2F0hmi/1000/live.m3u8
 #EXTINF:-1 tvg-id="GuizhouTV.cn@SD",贵州卫视 (576p)
 http://183.207.248.71/gitv/live1/G_GUIZHOU/G_GUIZHOU
 #EXTINF:-1 tvg-id="LiaoningTV.cn@SD",辽宁卫视 (576p)
-http://183.207.249.71/PLTV/3/224/3221225566/index.m3u8
-#EXTINF:-1 tvg-id="LiaoningTV.cn@SD",辽宁卫视 (576p)
 http://183.207.248.71/cntv/live1/liaoningstv/liaoningstv
+#EXTINF:-1 tvg-id="LiaoningTV.cn@SD",辽宁卫视 (576p)
+http://183.207.249.71/PLTV/3/224/3221225566/index.m3u8
+#EXTINF:-1,餘姚姚江文化 (576p) [Not 24/7]
+https://l.cztvcloud.com/channels/lantian/SXyuyao2/720p.m3u8
 #EXTINF:-1 tvg-id="HeilongjiangTV.cn@SD",黑龙江 (576p)
 http://183.207.248.71/gitv/live1/G_HEILONGJIANG/G_HEILONGJIANG
 #EXTINF:-1 tvg-id="BreadTV.cn@SD" tvg-name="面包台 Bread TV" group-title="其他",Bread TV面包台 (720p)
@@ -159,6 +165,10 @@ http://183.207.248.71/cntv/live1/SD-1500k-576P-jiayougw/SD-1500k-576P-jiayougw
 https://l.cztvcloud.com/channels/lantian/SXshengzhou1/720p.m3u8
 #EXTINF:-1,浙江 Ⅰ 绍兴影视 (720p)
 http://live.shaoxing.com.cn/video/s10001-sxtv3/index.m3u8
+#EXTINF:-1,萧山新闻综合 (720p) [Not 24/7]
+https://l.cztvcloud.com/channels/lantian/SXxiaoshan1/720p.m3u8
+#EXTINF:-1,蕭山生活頻道 (720p) [Not 24/7]
+https://l.cztvcloud.com/channels/lantian/SXxiaoshan2/720p.m3u8
 #EXTINF:-1 tvg-id="BeijingSatelliteTV.cn@HD",BRTV 北京卫视 (1080p)
 http://go.bkpcp.top/mg/bjws
 #EXTINF:-1 tvg-id="CGTN.cn@SD",CGTN (1080p)
@@ -195,12 +205,12 @@ http://183.207.248.71/cntv/live1/wmyx/wmyx
 http://live.ahsz.tv/video/s10001-ggpd/index.m3u8
 #EXTINF:-1,宿州新闻综合 (1080p) [Not 24/7]
 http://live.ahsz.tv/video/s10001-szzh/index.m3u8
-#EXTINF:-1,宿州科教 (1080p) [Not 24/7]
-http://live.ahsz.tv/video/s10001-kxjy/index.m3u8
 #EXTINF:-1 tvg-id="ShandongTV.cn@SD",山东卫视 (1080p)
 http://183.207.248.71/cntv/live1/HD-2500k-1080P-shandongstv/HD-2500k-1080P-shandongstv
 #EXTINF:-1,新昌休闲影视 (1080p) [Not 24/7]
 https://l.cztvcloud.com/channels/lantian/SXxinchang2/720p.m3u8
+#EXTINF:-1,新昌新聞綜合 (1080p) [Not 24/7]
+https://l.cztvcloud.com/channels/lantian/SXxinchang1/720p.m3u8
 #EXTINF:-1 tvg-id="JiangsuSatelliteTV.cn@SD",江苏卫视 (1080p)
 http://183.207.248.71/cntv/live1/jiangsustv/jiangsustv
 #EXTINF:-1 tvg-id="JiangsuSatelliteTV.cn@SD",江苏卫视 (1080p) [Not 24/7]
@@ -229,8 +239,6 @@ http://hlsal-ldvt.qing.mgtv.com/nn_live/nn_x64/dWlwPTEyNy4wLjAuMSZ1aWQ9cWluZy1jb
 https://restream.pdtvhd.com/memfs/c1cd2ed0-3b2b-4c25-af98-a7fb0b1eb130.m3u8
 #EXTINF:-1 tvg-name="CGTN英语" tvg-logo="https://live.fanmingming.cn/tv/CGTN.png" group-title="央视频道",CGTN英语
 https://english-livetx.cgtn.com/hls/yypdyyctzb_hd.m3u8
-#EXTINF:-1 tvg-id="CNDFilmMiddleSchoolChannel.cn@SD",CND Film Middle School Channel
-http://live-play.zxstv.com.cn/zhongxuesheng/zhongxuesheng.m3u8
 #EXTINF:-1 tvg-id="ChifengComprehensiveNewsChanel.cn@SD",Chifeng Comprehensive News Chanel
 http://play1-qk.nmtv.cn/live/1735546697341033.m3u8
 #EXTINF:-1 tvg-id="DragonTVInternational.cn@SD",Dragon TV International
@@ -249,10 +257,6 @@ https://restream.pdtvhd.com/memfs/1db8c005-9365-4b32-94a4-3736987b5646.m3u8
 https://jiangning-tv-playing-t.cm.jstv.com/jiangning-tv/jnxwzh.m3u8
 #EXTINF:-1 tvg-id="KangbaTV.cn@SD",Kangba TV
 http://110.185.237.164:8888/hls/30/index.m3u8
-#EXTINF:-1 tvg-id="LanzhouComprehensiveNewsChannel.cn@SD",Lanzhou Comprehensive News Channel
-https://liveplus.lzr.com.cn/xwzh/HD/live.m3u8
-#EXTINF:-1 tvg-id="LanzhouCultureTourismChannel.cn@SD",Lanzhou Culture & Tourism Channel
-https://liveplus.lzr.com.cn/wlpd/HD/live.m3u8
 #EXTINF:-1 tvg-id="SipingTV.cn@SD",Siping TV
 http://stream2.jlntv.cn/sptv/sd/live.m3u8?_upt=f27750421743154598
 #EXTINF:-1 tvg-id="ZhejiangInternationalChannel.cn@SD",Zhejiang TV International
