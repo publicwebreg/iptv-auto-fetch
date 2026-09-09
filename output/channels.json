@@ -64,6 +64,14 @@
     "group_title": ""
   },
   {
+    "name": "QTV-2",
+    "url": "http://video10.qtv.com.cn/drm/qtv2at/manifest.m3u8",
+    "tvg_id": "QTV2.cn@SD",
+    "tvg_name": "",
+    "tvg_logo": "",
+    "group_title": ""
+  },
+  {
     "name": "Xinjiang TV 2",
     "url": "http://110.153.180.106:55555/out_3/index.m3u8",
     "tvg_id": "XinjiangTV2.cn@SD",
@@ -89,7 +97,7 @@
   },
   {
     "name": "Xinjiang TV 3",
-    "url": "http://110.153.180.106:55555/out_2/index.m3u8",
+    "url": "http://120.70.60.179:9901/tsfile/live/1006_1.m3u8?authid=0&key=txiptv&playlive=1",
     "tvg_id": "XinjiangTV3.cn@SD",
     "tvg_name": "",
     "tvg_logo": "",
@@ -97,7 +105,7 @@
   },
   {
     "name": "Xinjiang TV 3",
-    "url": "http://120.70.60.179:9901/tsfile/live/1006_1.m3u8?authid=0&key=txiptv&playlive=1",
+    "url": "http://110.153.180.106:55555/out_2/index.m3u8",
     "tvg_id": "XinjiangTV3.cn@SD",
     "tvg_name": "",
     "tvg_logo": "",
@@ -176,6 +184,14 @@
     "group_title": "央视频道"
   },
   {
+    "name": "QTV-6",
+    "url": "http://video10.qtv.com.cn/drm/qtv6at/manifest.m3u8",
+    "tvg_id": "QTV6.cn@SD",
+    "tvg_name": "",
+    "tvg_logo": "",
+    "group_title": ""
+  },
+  {
     "name": "CCTV-7 (720p)",
     "url": "http://74.91.26.218:82/live/cctv7hd.m3u8",
     "tvg_id": "CCTV7.cn@SD",
@@ -193,7 +209,7 @@
   },
   {
     "name": "CCTV-8K (1080p)",
-    "url": "http://192.151.150.154/live/cctv8k.m3u8",
+    "url": "http://198.204.240.250:82/live/cctv8k.m3u8",
     "tvg_id": "CCTV8K.cn@HD",
     "tvg_name": "CCTV-8K",
     "tvg_logo": "",
@@ -201,7 +217,7 @@
   },
   {
     "name": "CCTV-8K (1080p)",
-    "url": "http://198.204.240.250:82/live/cctv8k.m3u8",
+    "url": "http://192.151.150.154/live/cctv8k.m3u8",
     "tvg_id": "CCTV8K.cn@HD",
     "tvg_name": "CCTV-8K",
     "tvg_logo": "",
@@ -376,6 +392,14 @@
     "group_title": ""
   },
   {
+    "name": "余姚新闻综合 (576p)",
+    "url": "https://l.cztvcloud.com/channels/lantian/SXyuyao1/720p.m3u8",
+    "tvg_id": "",
+    "tvg_name": "",
+    "tvg_logo": "",
+    "group_title": ""
+  },
+  {
     "name": "内蒙古卫视 (576p)",
     "url": "http://183.207.248.71/gitv/live1/G_NEIMENGGU/G_NEIMENGGU",
     "tvg_id": "",
@@ -417,7 +441,7 @@
   },
   {
     "name": "新疆卫视 (576p)",
-    "url": "http://183.207.248.71/cntv/live1/xinjiangstv/xinjiangstv",
+    "url": "http://183.207.248.71/gitv/live1/G_XINJIANG/G_XINJIANG",
     "tvg_id": "",
     "tvg_name": "",
     "tvg_logo": "",
@@ -425,7 +449,7 @@
   },
   {
     "name": "新疆卫视 (576p)",
-    "url": "http://183.207.248.71/gitv/live1/G_XINJIANG/G_XINJIANG",
+    "url": "http://183.207.248.71/cntv/live1/xinjiangstv/xinjiangstv",
     "tvg_id": "",
     "tvg_name": "",
     "tvg_logo": "",
@@ -537,7 +561,7 @@
   },
   {
     "name": "辽宁卫视 (576p)",
-    "url": "http://183.207.248.71/cntv/live1/liaoningstv/liaoningstv",
+    "url": "http://183.207.249.71/PLTV/3/224/3221225566/index.m3u8",
     "tvg_id": "LiaoningTV.cn@SD",
     "tvg_name": "",
     "tvg_logo": "",
@@ -545,7 +569,7 @@
   },
   {
     "name": "辽宁卫视 (576p)",
-    "url": "http://183.207.249.71/PLTV/3/224/3221225566/index.m3u8",
+    "url": "http://183.207.248.71/cntv/live1/liaoningstv/liaoningstv",
     "tvg_id": "LiaoningTV.cn@SD",
     "tvg_name": "",
     "tvg_logo": "",
@@ -576,6 +600,14 @@
     "group_title": ""
   },
   {
+    "name": "上虞經濟文化 (720p) [Not 24/7]",
+    "url": "https://l.cztvcloud.com/channels/lantian/SXshangyu2/720p.m3u8",
+    "tvg_id": "",
+    "tvg_name": "",
+    "tvg_logo": "",
+    "group_title": ""
+  },
+  {
     "name": "家有购物 (720p) [Not 24/7]",
     "url": "http://183.207.248.71/cntv/live1/SD-1500k-576P-jiayougw/SD-1500k-576P-jiayougw",
     "tvg_id": "",
@@ -594,22 +626,6 @@
   {
     "name": "浙江 Ⅰ 绍兴影视 (720p)",
     "url": "http://live.shaoxing.com.cn/video/s10001-sxtv3/index.m3u8",
-    "tvg_id": "",
-    "tvg_name": "",
-    "tvg_logo": "",
-    "group_title": ""
-  },
-  {
-    "name": "萧山新闻综合 (720p) [Not 24/7]",
-    "url": "https://l.cztvcloud.com/channels/lantian/SXxiaoshan1/720p.m3u8",
-    "tvg_id": "",
-    "tvg_name": "",
-    "tvg_logo": "",
-    "group_title": ""
-  },
-  {
-    "name": "蕭山生活頻道 (720p) [Not 24/7]",
-    "url": "https://l.cztvcloud.com/channels/lantian/SXxiaoshan2/720p.m3u8",
     "tvg_id": "",
     "tvg_name": "",
     "tvg_logo": "",
@@ -714,14 +730,6 @@
   {
     "name": "动画王国 (1080p)",
     "url": "http://183.207.248.71/cntv/live1/donghuawg/donghuawg",
-    "tvg_id": "",
-    "tvg_name": "",
-    "tvg_logo": "",
-    "group_title": ""
-  },
-  {
-    "name": "四川 Ⅰ 巴中综合台 (1080p) [Not 24/7]",
-    "url": "http://30814.hlsplay.aodianyun.com/lms_30814/tv_channel_246.flv",
     "tvg_id": "",
     "tvg_name": "",
     "tvg_logo": "",
@@ -880,6 +888,14 @@
     "group_title": ""
   },
   {
+    "name": "Guangxi Variety & Travel Channel",
+    "url": "http://111.59.24.227:8181/tsfile/live/1001_1.m3u8?key=txiptv&playlive=1&authid=0",
+    "tvg_id": "GuangxiVarietyTravelChannel.cn@SD",
+    "tvg_name": "",
+    "tvg_logo": "",
+    "group_title": ""
+  },
+  {
     "name": "Guangzhou TV",
     "url": "https://tencentplaybusiness.gztv.com/live/zonghes.m3u8",
     "tvg_id": "GuangzhouTV.cn@SD",
@@ -936,6 +952,22 @@
     "group_title": ""
   },
   {
+    "name": "Zhejiang TV International",
+    "url": "https://ali-m-l.cztv.com/channels/lantian/channel10/1080p.m3u8",
+    "tvg_id": "ZhejiangInternationalChannel.cn@SD",
+    "tvg_name": "",
+    "tvg_logo": "",
+    "group_title": ""
+  },
+  {
+    "name": "之江纪录",
+    "url": "https://ali-m-l.cztv.com/channels/lantian/channel012/1080p.m3u8",
+    "tvg_id": "",
+    "tvg_name": "",
+    "tvg_logo": "",
+    "group_title": ""
+  },
+  {
     "name": "兴隆综合",
     "url": "https://jwcdnqx.hebyun.com.cn/live/xlzh/1500k/tzwj_video.m3u8",
     "tvg_id": "",
@@ -986,6 +1018,62 @@
   {
     "name": "松原新闻综合 [Geo-blocked]",
     "url": "https://stream2.jlntv.cn/sytv/sd/live.m3u8",
+    "tvg_id": "",
+    "tvg_name": "",
+    "tvg_logo": "",
+    "group_title": ""
+  },
+  {
+    "name": "浙江国际",
+    "url": "https://ali-m-l.cztv.com/channels/lantian/channel010/1080p.m3u8",
+    "tvg_id": "",
+    "tvg_name": "",
+    "tvg_logo": "",
+    "group_title": ""
+  },
+  {
+    "name": "浙江少儿",
+    "url": "https://ali-m-l.cztv.com/channels/lantian/channel008/1080p.m3u8",
+    "tvg_id": "",
+    "tvg_name": "浙江少儿",
+    "tvg_logo": "https://live.fanmingming.cn/tv/浙江少儿.png",
+    "group_title": "浙江频道"
+  },
+  {
+    "name": "浙江教科",
+    "url": "https://ali-m-l.cztv.com/channels/lantian/channel004/1080p.m3u8",
+    "tvg_id": "",
+    "tvg_name": "",
+    "tvg_logo": "",
+    "group_title": ""
+  },
+  {
+    "name": "浙江新闻",
+    "url": "https://ali-m-l.cztv.com/channels/lantian/channel007/1080p.m3u8",
+    "tvg_id": "",
+    "tvg_name": "",
+    "tvg_logo": "",
+    "group_title": ""
+  },
+  {
+    "name": "浙江民生",
+    "url": "https://ali-m-l.cztv.com/channels/lantian/channel006/1080p.m3u8",
+    "tvg_id": "",
+    "tvg_name": "",
+    "tvg_logo": "",
+    "group_title": ""
+  },
+  {
+    "name": "浙江经济",
+    "url": "https://ali-m-l.cztv.com/channels/lantian/channel003/1080p.m3u8",
+    "tvg_id": "",
+    "tvg_name": "",
+    "tvg_logo": "",
+    "group_title": ""
+  },
+  {
+    "name": "浙江钱江",
+    "url": "https://ali-m-l.cztv.com/channels/lantian/channel002/1080p.m3u8",
     "tvg_id": "",
     "tvg_name": "",
     "tvg_logo": "",
