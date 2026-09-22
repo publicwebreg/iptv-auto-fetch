@@ -1,7 +1,7 @@
 #EXTM3U
 # Generated: IPTV Auto-Fetch v4 
-# Date: 2026-09-21 21:27
-# Total: 151 channels
+# Date: 2026-09-22 02:33
+# Total: 149 channels
 
 #EXTINF:-1 tvg-id="CCTV1.cn@SD" tvg-name="CCTV-1综合" tvg-logo="https://live.fanmingming.cn/tv/CCTV1.png" group-title="央视频道",CCTV-1
 https://liveplay-srs.voc.com.cn/hls/tv/134_180adf.m3u8
@@ -25,20 +25,14 @@ http://play1-qk.nmtv.cn/live/1769652109096027.m3u8
 http://video10.qtv.com.cn/drm/qtv2at/manifest.m3u8
 #EXTINF:-1 tvg-id="XinjiangTV2.cn@SD",Xinjiang TV 2
 http://110.153.180.106:55555/out_3/index.m3u8
-#EXTINF:-1 tvg-id="XinjiangTV2.cn@SD",Xinjiang TV 2
-https://hls.quklive.com/live/play-sh-21.quklive.com/1777511615189085.m3u8?auth_key=2092871636-a39d8614688744d0b170b856b086ba80-0-33900446b83fa0b5befeb6bedbcd51a0
 #EXTINF:-1 tvg-id="CCTV3.cn@SD" tvg-name="CCTV-3综艺" tvg-logo="https://live.fanmingming.cn/tv/CCTV3.png" group-title="央视频道",CCTV-3 (720p)
 http://74.91.26.218:82/live/cctv3hd.m3u8
-#EXTINF:-1 tvg-id="QTV3.cn@SD",QTV-3
-http://video10.qtv.com.cn/drm/qtv3at/manifest.m3u8
+#EXTINF:-1 tvg-id="XinjiangTV3.cn@SD",Xinjiang TV 3
+http://218.84.35.38:3000/m3u8/live/tctv-2/index.m3u8
 #EXTINF:-1 tvg-id="XinjiangTV3.cn@SD",Xinjiang TV 3
 http://120.70.60.179:9901/tsfile/live/1006_1.m3u8?authid=0&key=txiptv&playlive=1
 #EXTINF:-1 tvg-id="XinjiangTV3.cn@SD",Xinjiang TV 3
 http://110.153.180.106:55555/out_2/index.m3u8
-#EXTINF:-1 tvg-id="XinjiangTV3.cn@SD",Xinjiang TV 3
-http://218.84.35.38:3000/m3u8/live/tctv-2/index.m3u8
-#EXTINF:-1 tvg-id="XinjiangTV3.cn@SD",Xinjiang TV 3
-https://st-video.xjmty.com/fs/livedit/e55abfa37af26e19/8ce9971c2177b3dd.m3u8
 #EXTINF:-1,上虞3新商都 (720p) [Not 24/7]
 https://l.cztvcloud.com/channels/lantian/SXshangyu3/720p.m3u8
 #EXTINF:-1,福州广播电视台都市生活频道 (FZTV-3) (1080p)
@@ -49,10 +43,12 @@ http://74.91.26.218:82/live/cctv4hd.m3u8
 http://198.204.240.250:82/live/cctv4k.m3u8
 #EXTINF:-1 tvg-id="QTV4.cn@SD",QTV-4
 http://video10.qtv.com.cn/drm/qtv4at/manifest.m3u8
-#EXTINF:-1 tvg-id="CCTV6.cn@HD" tvg-name="CCTV-6电影" tvg-logo="https://live.fanmingming.cn/tv/CCTV6.png" group-title="央视频道",CCTV-6 (1080p)
-http://198.204.240.250:82/live/cctv6.m3u8
+#EXTINF:-1 tvg-id="QTV5.cn@SD",QTV-5
+http://video10.qtv.com.cn/drm/qtv5at/manifest.m3u8
 #EXTINF:-1 tvg-id="CCTV6.cn@HD" tvg-name="CCTV-6电影" tvg-logo="https://live.fanmingming.cn/tv/CCTV6.png" group-title="央视频道",CCTV-6 (1080p)
 http://69.30.245.50/live/cctv6.m3u8
+#EXTINF:-1 tvg-id="CCTV6.cn@HD" tvg-name="CCTV-6电影" tvg-logo="https://live.fanmingming.cn/tv/CCTV6.png" group-title="央视频道",CCTV-6 (1080p)
+http://198.204.240.250:82/live/cctv6.m3u8
 #EXTINF:-1 tvg-id="QTV6.cn@SD",QTV-6
 http://video10.qtv.com.cn/drm/qtv6at/manifest.m3u8
 #EXTINF:-1 tvg-id="CCTV7.cn@SD" tvg-name="CCTV-7国防军事" tvg-logo="https://live.fanmingming.cn/tv/CCTV7.png" group-title="央视频道",CCTV-7 (720p)
@@ -89,8 +85,6 @@ http://74.91.26.218:82/live/cctv15hd.m3u8
 http://74.91.26.218:82/live/cctv16hd.m3u8
 #EXTINF:-1 tvg-id="CCTV17.cn@HD" tvg-name="CCTV-17农业农村" tvg-logo="https://live.fanmingming.cn/tv/CCTV17.png" group-title="央视频道",CCTV-17 (1080p)
 http://74.91.26.218:82/live/cctv17hd.m3u8
-#EXTINF:-1 tvg-id="ChuxiongNewsChannel.cn@SD",Chuxiong News Channel [Not 24/7]
-http://hwapi.yntv.net/ew265l/848y54.m3u8
 #EXTINF:-1,荣昌综合 (404p) [Not 24/7]
 http://183.64.181.25:40023/rongchang01.m3u8
 #EXTINF:-1,江津新闻综合 (480p)
@@ -99,14 +93,14 @@ http://222.179.155.21:1935/ch1.m3u8
 http://222.179.155.21:1935/ch0.m3u8
 #EXTINF:-1,靖江新闻綜合 (480p) [Not 24/7]
 http://visit.jjbctv.com:1935/live/xwzhmb/playlist.m3u8
+#EXTINF:-1,河源综合 (540p)
+https://tmpstream.hyrtv.cn/xwzh/sd/live.m3u8
 #EXTINF:-1 tvg-id="YunnanSatelliteTV.cn@SD",云南卫视 (576p)
 http://183.207.248.71/gitv/live1/G_YUNNAN/G_YUNNAN
 #EXTINF:-1 tvg-id="YunnanSatelliteTV.cn@SD",云南卫视 (576p) [Not 24/7]
 http://183.207.248.71/cntv/live1/yunnanstv/yunnanstv
 #EXTINF:-1,余姚姚江文化 (576p)
 https://l.cztvcloud.com/channels/lantian/SXyuyao3/720p.m3u8
-#EXTINF:-1,余姚新闻综合 (576p)
-https://l.cztvcloud.com/channels/lantian/SXyuyao1/720p.m3u8
 #EXTINF:-1,内蒙古卫视 (576p)
 http://183.207.248.71/gitv/live1/G_NEIMENGGU/G_NEIMENGGU
 #EXTINF:-1,南京十八 (576p)
@@ -237,6 +231,8 @@ http://hlsal-ldvt.qing.mgtv.com/nn_live/nn_x64/dWlwPTEyNy4wLjAuMSZ1aWQ9cWluZy1jb
 https://restream.pdtvhd.com/memfs/c1cd2ed0-3b2b-4c25-af98-a7fb0b1eb130.m3u8
 #EXTINF:-1 tvg-name="CGTN英语" tvg-logo="https://live.fanmingming.cn/tv/CGTN.png" group-title="央视频道",CGTN英语
 https://english-livetx.cgtn.com/hls/yypdyyctzb_hd.m3u8
+#EXTINF:-1 tvg-id="CNDFilmMiddleSchoolChannel.cn@SD",CND Film Middle School Channel
+http://live-play.zxstv.com.cn/zhongxuesheng/zhongxuesheng.m3u8
 #EXTINF:-1 tvg-id="ChifengComprehensiveNewsChanel.cn@SD",Chifeng Comprehensive News Chanel
 http://play1-qk.nmtv.cn/live/1735546697341033.m3u8
 #EXTINF:-1 tvg-id="DragonTVInternational.cn@SD",Dragon TV International
