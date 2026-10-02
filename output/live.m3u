@@ -1,7 +1,7 @@
 #EXTM3U
 # Generated: IPTV Auto-Fetch v4 
-# Date: 2026-10-02 17:06
-# Total: 142 channels
+# Date: 2026-10-02 21:37
+# Total: 145 channels
 
 #EXTINF:-1 tvg-id="CCTV1.cn@SD" tvg-name="CCTV-1综合" tvg-logo="https://live.fanmingming.cn/tv/CCTV1.png" group-title="央视频道",CCTV-1
 https://liveplay-srs.voc.com.cn/hls/tv/134_180adf.m3u8
@@ -43,10 +43,12 @@ http://74.91.26.218:82/live/cctv4hd.m3u8
 http://198.204.240.250:82/live/cctv4k.m3u8
 #EXTINF:-1 tvg-id="QTV4.cn@SD",QTV-4
 http://video10.qtv.com.cn/drm/qtv4at/manifest.m3u8
-#EXTINF:-1 tvg-id="CCTV6.cn@HD" tvg-name="CCTV-6电影" tvg-logo="https://live.fanmingming.cn/tv/CCTV6.png" group-title="央视频道",CCTV-6 (1080p)
-http://198.204.240.250:82/live/cctv6.m3u8
+#EXTINF:-1 tvg-id="QTV5.cn@SD",QTV-5
+http://video10.qtv.com.cn/drm/qtv5at/manifest.m3u8
 #EXTINF:-1 tvg-id="CCTV6.cn@HD" tvg-name="CCTV-6电影" tvg-logo="https://live.fanmingming.cn/tv/CCTV6.png" group-title="央视频道",CCTV-6 (1080p)
 http://69.30.245.50/live/cctv6.m3u8
+#EXTINF:-1 tvg-id="CCTV6.cn@HD" tvg-name="CCTV-6电影" tvg-logo="https://live.fanmingming.cn/tv/CCTV6.png" group-title="央视频道",CCTV-6 (1080p)
+http://198.204.240.250:82/live/cctv6.m3u8
 #EXTINF:-1 tvg-id="QTV6.cn@SD",QTV-6
 http://video10.qtv.com.cn/drm/qtv6at/manifest.m3u8
 #EXTINF:-1 tvg-id="CCTV7.cn@SD" tvg-name="CCTV-7国防军事" tvg-logo="https://live.fanmingming.cn/tv/CCTV7.png" group-title="央视频道",CCTV-7 (720p)
@@ -95,10 +97,14 @@ http://222.179.155.21:1935/ch0.m3u8
 http://visit.jjbctv.com:1935/live/xwzhmb/playlist.m3u8
 #EXTINF:-1 tvg-id="HebiNewsChannel.cn@SD",鹤壁新闻综合 (480p) [Not 24/7]
 http://pili-live-hls.hebitv.com/hebi/hebi.m3u8
+#EXTINF:-1 tvg-id="CGTNSpanish.cn@SD",CGTN Spanish (576p)
+http://45.186.106.147:8880/play/a06f/index.m3u8
 #EXTINF:-1 tvg-id="YunnanSatelliteTV.cn@SD",云南卫视 (576p)
 http://183.207.248.71/gitv/live1/G_YUNNAN/G_YUNNAN
 #EXTINF:-1 tvg-id="YunnanSatelliteTV.cn@SD",云南卫视 (576p) [Not 24/7]
 http://183.207.248.71/cntv/live1/yunnanstv/yunnanstv
+#EXTINF:-1,余姚新闻综合 (576p)
+https://l.cztvcloud.com/channels/lantian/SXyuyao1/720p.m3u8
 #EXTINF:-1,内蒙古卫视 (576p)
 http://183.207.248.71/gitv/live1/G_NEIMENGGU/G_NEIMENGGU
 #EXTINF:-1,南京十八 (576p)
@@ -196,9 +202,9 @@ http://183.207.248.71/cntv/live1/HD-2500k-1080P-jiangsustv/HD-2500k-1080P-jiangs
 #EXTINF:-1 tvg-id="JiangxiTV.cn@SD",江西卫视 (1080p)
 http://183.207.248.71/cntv/live1/jiangxistv/jiangxistv
 #EXTINF:-1 tvg-id="ZhejiangSatelliteTV.cn@SD",浙江卫视 (1080p)
-http://183.207.248.71/cntv/live1/HD-2500k-1080P-zhejiangstv/HD-2500k-1080P-zhejiangstv
-#EXTINF:-1 tvg-id="ZhejiangSatelliteTV.cn@SD",浙江卫视 (1080p)
 http://183.207.248.71/cntv/live1/zhejiangstv/zhejiangstv
+#EXTINF:-1 tvg-id="ZhejiangSatelliteTV.cn@SD",浙江卫视 (1080p)
+http://183.207.248.71/cntv/live1/HD-2500k-1080P-zhejiangstv/HD-2500k-1080P-zhejiangstv
 #EXTINF:-1 tvg-id="ShenzhenSatelliteTV.cn@SD",深圳卫视 (1080p) [Not 24/7]
 http://183.207.248.71/cntv/live1/HD-2500k-1080P-shenzhenstv/HD-2500k-1080P-shenzhenstv
 #EXTINF:-1,福州电视台少儿频道 (FZTV-少儿) (1080p)
