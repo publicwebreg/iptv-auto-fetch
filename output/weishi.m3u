@@ -1,7 +1,7 @@
 #EXTM3U
 # Generated: IPTV Auto-Fetch v4 
-# Date: 2026-10-20 16:04
-# Total: 40 channels
+# Date: 2026-10-20 21:02
+# Total: 41 channels
 
 #EXTINF:-1 tvg-id="YunnanSatelliteTV.cn@SD",云南卫视 (576p)
 http://183.207.248.71/gitv/live1/G_YUNNAN/G_YUNNAN
@@ -31,6 +31,8 @@ http://183.207.248.71/gitv/live1/G_JSCS/G_JSCS
 http://183.207.248.71/gitv/live1/G_JSYS/G_JSYS
 #EXTINF:-1 tvg-id="JiangsuEducationalChannel.cn@SD",江苏教育 (576p) [Not 24/7]
 http://183.207.248.71/gitv/live1/G_JSJY/G_JSJY
+#EXTINF:-1 tvg-id="JiangsuVarietyChannel.cn@SD",江苏综艺 (576p) [Not 24/7]
+http://183.207.248.71/gitv/live1/G_JSZY/G_JSZY
 #EXTINF:-1 tvg-id="JiangxiTV.cn@SD",江西卫视 (576p)
 http://183.207.248.71/gitv/live1/JXWS/JXWS
 #EXTINF:-1,浙江 Ⅰ 绍兴综合 (576p)
@@ -62,9 +64,9 @@ http://183.207.248.71/cntv/live1/HD-2500k-1080P-jiangsustv/HD-2500k-1080P-jiangs
 #EXTINF:-1 tvg-id="JiangxiTV.cn@SD",江西卫视 (1080p)
 http://183.207.248.71/cntv/live1/jiangxistv/jiangxistv
 #EXTINF:-1 tvg-id="ZhejiangSatelliteTV.cn@SD",浙江卫视 (1080p)
-http://183.207.248.71/cntv/live1/zhejiangstv/zhejiangstv
-#EXTINF:-1 tvg-id="ZhejiangSatelliteTV.cn@SD",浙江卫视 (1080p)
 http://183.207.248.71/cntv/live1/HD-2500k-1080P-zhejiangstv/HD-2500k-1080P-zhejiangstv
+#EXTINF:-1 tvg-id="ZhejiangSatelliteTV.cn@SD",浙江卫视 (1080p)
+http://183.207.248.71/cntv/live1/zhejiangstv/zhejiangstv
 #EXTINF:-1 tvg-id="ShenzhenSatelliteTV.cn@SD",深圳卫视 (1080p) [Not 24/7]
 http://183.207.248.71/cntv/live1/HD-2500k-1080P-shenzhenstv/HD-2500k-1080P-shenzhenstv
 #EXTINF:-1,黑龙江卫 (1080p)
