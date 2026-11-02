@@ -72,6 +72,14 @@
     "group_title": ""
   },
   {
+    "name": "QTV-2",
+    "url": "http://video10.qtv.com.cn/drm/qtv2at/manifest.m3u8",
+    "tvg_id": "QTV2.cn@SD",
+    "tvg_name": "",
+    "tvg_logo": "",
+    "group_title": ""
+  },
+  {
     "name": "Xinjiang TV 2",
     "url": "http://110.153.180.106:55555/out_3/index.m3u8",
     "tvg_id": "XinjiangTV2.cn@SD",
@@ -200,28 +208,12 @@
     "group_title": ""
   },
   {
-    "name": "QTV-5",
-    "url": "http://video10.qtv.com.cn/drm/qtv5at/manifest.m3u8",
-    "tvg_id": "QTV5.cn@SD",
-    "tvg_name": "",
-    "tvg_logo": "",
-    "group_title": ""
-  },
-  {
     "name": "Xinjiang TV 5",
     "url": "http://120.70.60.179:9901/tsfile/live/1002_1.m3u8?key=txiptv&playlive=1&authid=0",
     "tvg_id": "XinjiangTV5.cn@SD",
     "tvg_name": "",
     "tvg_logo": "",
     "group_title": ""
-  },
-  {
-    "name": "CCTV-6 (1080p)",
-    "url": "http://69.30.245.50/live/cctv6.m3u8",
-    "tvg_id": "CCTV6.cn@HD",
-    "tvg_name": "CCTV-6电影",
-    "tvg_logo": "https://live.fanmingming.cn/tv/CCTV6.png",
-    "group_title": "央视频道"
   },
   {
     "name": "CCTV-6 (1080p)",
@@ -232,12 +224,12 @@
     "group_title": "央视频道"
   },
   {
-    "name": "QTV-6",
-    "url": "http://video10.qtv.com.cn/drm/qtv6at/manifest.m3u8",
-    "tvg_id": "QTV6.cn@SD",
-    "tvg_name": "",
-    "tvg_logo": "",
-    "group_title": ""
+    "name": "CCTV-6 (1080p)",
+    "url": "http://69.30.245.50/live/cctv6.m3u8",
+    "tvg_id": "CCTV6.cn@HD",
+    "tvg_name": "CCTV-6电影",
+    "tvg_logo": "https://live.fanmingming.cn/tv/CCTV6.png",
+    "group_title": "央视频道"
   },
   {
     "name": "CCTV-7 (720p)",
@@ -881,7 +873,7 @@
   },
   {
     "name": "浙江卫视 (1080p)",
-    "url": "http://183.207.248.71/cntv/live1/HD-2500k-1080P-zhejiangstv/HD-2500k-1080P-zhejiangstv",
+    "url": "http://183.207.248.71/cntv/live1/zhejiangstv/zhejiangstv",
     "tvg_id": "ZhejiangSatelliteTV.cn@SD",
     "tvg_name": "",
     "tvg_logo": "",
@@ -889,7 +881,7 @@
   },
   {
     "name": "浙江卫视 (1080p)",
-    "url": "http://183.207.248.71/cntv/live1/zhejiangstv/zhejiangstv",
+    "url": "http://183.207.248.71/cntv/live1/HD-2500k-1080P-zhejiangstv/HD-2500k-1080P-zhejiangstv",
     "tvg_id": "ZhejiangSatelliteTV.cn@SD",
     "tvg_name": "",
     "tvg_logo": "",
@@ -1067,6 +1059,14 @@
     "name": "Kangba TV",
     "url": "http://110.185.237.164:8888/hls/30/index.m3u8",
     "tvg_id": "KangbaTV.cn@SD",
+    "tvg_name": "",
+    "tvg_logo": "",
+    "group_title": ""
+  },
+  {
+    "name": "Lanzhou Comprehensive News Channel",
+    "url": "https://liveplus.lzr.com.cn/xwzh/HD/live.m3u8",
+    "tvg_id": "LanzhouComprehensiveNewsChannel.cn@SD",
     "tvg_name": "",
     "tvg_logo": "",
     "group_title": ""
