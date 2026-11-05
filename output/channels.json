@@ -184,16 +184,8 @@
     "group_title": ""
   },
   {
-    "name": "QTV-5",
-    "url": "http://video10.qtv.com.cn/drm/qtv5at/manifest.m3u8",
-    "tvg_id": "QTV5.cn@SD",
-    "tvg_name": "",
-    "tvg_logo": "",
-    "group_title": ""
-  },
-  {
     "name": "CCTV-6 (1080p)",
-    "url": "http://198.204.240.250:82/live/cctv6.m3u8",
+    "url": "http://69.30.245.50/live/cctv6.m3u8",
     "tvg_id": "CCTV6.cn@HD",
     "tvg_name": "CCTV-6电影",
     "tvg_logo": "https://live.fanmingming.cn/tv/CCTV6.png",
@@ -201,7 +193,7 @@
   },
   {
     "name": "CCTV-6 (1080p)",
-    "url": "http://69.30.245.50/live/cctv6.m3u8",
+    "url": "http://198.204.240.250:82/live/cctv6.m3u8",
     "tvg_id": "CCTV6.cn@HD",
     "tvg_name": "CCTV-6电影",
     "tvg_logo": "https://live.fanmingming.cn/tv/CCTV6.png",
@@ -328,14 +320,6 @@
     "group_title": "央视频道"
   },
   {
-    "name": "Chuxiong News Channel [Not 24/7]",
-    "url": "http://hwapi.yntv.net/ew265l/848y54.m3u8",
-    "tvg_id": "ChuxiongNewsChannel.cn@SD",
-    "tvg_name": "",
-    "tvg_logo": "",
-    "group_title": ""
-  },
-  {
     "name": "荣昌综合 (404p) [Not 24/7]",
     "url": "http://183.64.181.25:40023/rongchang01.m3u8",
     "tvg_id": "",
@@ -379,14 +363,6 @@
     "name": "Hebei TV (540p)",
     "url": "https://restream.pdtvhd.com/memfs/1db8c005-9365-4b32-94a4-3736987b5646.m3u8",
     "tvg_id": "HebeiTV.cn@SD",
-    "tvg_name": "",
-    "tvg_logo": "",
-    "group_title": ""
-  },
-  {
-    "name": "CGTN Spanish (576p)",
-    "url": "http://45.186.106.147:8880/play/a06f/index.m3u8",
-    "tvg_id": "CGTNSpanish.cn@SD",
     "tvg_name": "",
     "tvg_logo": "",
     "group_title": ""
@@ -474,14 +450,6 @@
   {
     "name": "新疆卫视 (576p)",
     "url": "http://183.207.248.71/gitv/live1/G_XINJIANG/G_XINJIANG",
-    "tvg_id": "",
-    "tvg_name": "",
-    "tvg_logo": "",
-    "group_title": ""
-  },
-  {
-    "name": "武进新闻 (576p) [Not 24/7]",
-    "url": "https://live.wjyanghu.com/live/CH1.m3u8",
     "tvg_id": "",
     "tvg_name": "",
     "tvg_logo": "",
@@ -657,6 +625,14 @@
   },
   {
     "name": "CGTN (1080p)",
+    "url": "https://english-livebkali.cgtn.com/live/encgtn.m3u8",
+    "tvg_id": "CGTN.cn@SD",
+    "tvg_name": "",
+    "tvg_logo": "",
+    "group_title": ""
+  },
+  {
+    "name": "CGTN (1080p)",
     "url": "https://hlspackager.akamaized.net/live/DB/CGTN_ENGLISH/HLS/CGTN_ENGLISH.m3u8",
     "tvg_id": "CGTN.cn@SD",
     "tvg_name": "",
@@ -666,14 +642,6 @@
   {
     "name": "CGTN (1080p)",
     "url": "https://amg00405-rakutentv-cgtn-rakuten-i9tar.amagi.tv/master.m3u8",
-    "tvg_id": "CGTN.cn@SD",
-    "tvg_name": "",
-    "tvg_logo": "",
-    "group_title": ""
-  },
-  {
-    "name": "CGTN (1080p)",
-    "url": "https://english-livebkali.cgtn.com/live/encgtn.m3u8",
     "tvg_id": "CGTN.cn@SD",
     "tvg_name": "",
     "tvg_logo": "",
@@ -762,6 +730,14 @@
   {
     "name": "完美游戏 (1080p) [Not 24/7]",
     "url": "http://183.207.248.71/cntv/live1/wmyx/wmyx",
+    "tvg_id": "",
+    "tvg_name": "",
+    "tvg_logo": "",
+    "group_title": ""
+  },
+  {
+    "name": "宿州新闻综合 (1080p) [Not 24/7]",
+    "url": "http://live.ahsz.tv/video/s10001-szzh/index.m3u8",
     "tvg_id": "",
     "tvg_name": "",
     "tvg_logo": "",
@@ -929,14 +905,6 @@
   },
   {
     "name": "Dongguan Comprehensive News Channel",
-    "url": "https://stream.sun0769.com/dgrtv1/mp4tv1_800/index.m3u8",
-    "tvg_id": "DongguanComprehensiveNewsChannel.cn@SD",
-    "tvg_name": "",
-    "tvg_logo": "",
-    "group_title": ""
-  },
-  {
-    "name": "Dongguan Comprehensive News Channel",
     "url": "http://stream.sun0769.com/dgrtv1/mp4tv1_1500.flv",
     "tvg_id": "DongguanComprehensiveNewsChannel.cn@SD",
     "tvg_name": "",
@@ -987,14 +955,6 @@
     "name": "Jiangsu Public & News Channel",
     "url": "https://jiangning-tv-playing-t.cm.jstv.com/jiangning-tv/jnxwzh.m3u8",
     "tvg_id": "JiangsuPublicNewsChannel.cn@SD",
-    "tvg_name": "",
-    "tvg_logo": "",
-    "group_title": ""
-  },
-  {
-    "name": "Jingmen Comprehensive News Channel",
-    "url": "https://stream.jmtv.com.cn/xwzh/sd/live.m3u8?_upt=341f4b8e1791883036",
-    "tvg_id": "JingmenComprehensiveNewsChannel.cn@SD",
     "tvg_name": "",
     "tvg_logo": "",
     "group_title": ""
