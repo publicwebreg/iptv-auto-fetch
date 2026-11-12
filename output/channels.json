@@ -64,8 +64,16 @@
     "group_title": ""
   },
   {
+    "name": "QTV-2",
+    "url": "http://video10.qtv.com.cn/drm/qtv2at/manifest.m3u8",
+    "tvg_id": "QTV2.cn@SD",
+    "tvg_name": "",
+    "tvg_logo": "",
+    "group_title": ""
+  },
+  {
     "name": "Xinjiang TV 2",
-    "url": "http://110.153.180.106:55555/out_3/index.m3u8",
+    "url": "https://infolive.hongshannet.cn/RedHillEye/1781077833267957853648adb1cc9957853648adb1cc9.m3u8?auth_key=1812613833-0-0-4dabcc60fbe41e40712b37dbf24dc877",
     "tvg_id": "XinjiangTV2.cn@SD",
     "tvg_name": "",
     "tvg_logo": "",
@@ -81,7 +89,7 @@
   },
   {
     "name": "Xinjiang TV 2",
-    "url": "https://infolive.hongshannet.cn/RedHillEye/1781077833267957853648adb1cc9957853648adb1cc9.m3u8?auth_key=1812613833-0-0-4dabcc60fbe41e40712b37dbf24dc877",
+    "url": "http://110.153.180.106:55555/out_3/index.m3u8",
     "tvg_id": "XinjiangTV2.cn@SD",
     "tvg_name": "",
     "tvg_logo": "",
@@ -128,6 +136,14 @@
     "group_title": ""
   },
   {
+    "name": "Xinjiang TV 3",
+    "url": "https://st-video.xjmty.com/fs/livedit/e55abfa37af26e19/8ce9971c2177b3dd.m3u8",
+    "tvg_id": "XinjiangTV3.cn@SD",
+    "tvg_name": "",
+    "tvg_logo": "",
+    "group_title": ""
+  },
+  {
     "name": "福州广播电视台都市生活频道 (FZTV-3) (1080p)",
     "url": "http://live.zohi.tv/video/s10001-fztv-3/index.m3u8",
     "tvg_id": "",
@@ -168,6 +184,14 @@
     "group_title": ""
   },
   {
+    "name": "QTV-5",
+    "url": "http://video10.qtv.com.cn/drm/qtv5at/manifest.m3u8",
+    "tvg_id": "QTV5.cn@SD",
+    "tvg_name": "",
+    "tvg_logo": "",
+    "group_title": ""
+  },
+  {
     "name": "CCTV-6 (1080p)",
     "url": "http://198.204.240.250:82/live/cctv6.m3u8",
     "tvg_id": "CCTV6.cn@HD",
@@ -182,6 +206,14 @@
     "tvg_name": "CCTV-6电影",
     "tvg_logo": "https://live.fanmingming.cn/tv/CCTV6.png",
     "group_title": "央视频道"
+  },
+  {
+    "name": "QTV-6",
+    "url": "http://video10.qtv.com.cn/drm/qtv6at/manifest.m3u8",
+    "tvg_id": "QTV6.cn@SD",
+    "tvg_name": "",
+    "tvg_logo": "",
+    "group_title": ""
   },
   {
     "name": "CCTV-7 (720p)",
@@ -537,7 +569,7 @@
   },
   {
     "name": "辽宁卫视 (576p)",
-    "url": "http://183.207.248.71/cntv/live1/liaoningstv/liaoningstv",
+    "url": "http://183.207.249.71/PLTV/3/224/3221225566/index.m3u8",
     "tvg_id": "LiaoningTV.cn@SD",
     "tvg_name": "",
     "tvg_logo": "",
@@ -545,8 +577,16 @@
   },
   {
     "name": "辽宁卫视 (576p)",
-    "url": "http://183.207.249.71/PLTV/3/224/3221225566/index.m3u8",
+    "url": "http://183.207.248.71/cntv/live1/liaoningstv/liaoningstv",
     "tvg_id": "LiaoningTV.cn@SD",
+    "tvg_name": "",
+    "tvg_logo": "",
+    "group_title": ""
+  },
+  {
+    "name": "餘姚姚江文化 (576p) [Not 24/7]",
+    "url": "https://l.cztvcloud.com/channels/lantian/SXyuyao2/720p.m3u8",
+    "tvg_id": "",
     "tvg_name": "",
     "tvg_logo": "",
     "group_title": ""
@@ -633,7 +673,7 @@
   },
   {
     "name": "CGTN Documentary (1080p)",
-    "url": "https://amg00405-rakutentv-cgtndocumentary-rakuten-0ql8j.amagi.tv/master.m3u8",
+    "url": "https://hlspackager.akamaized.net/live/DB/CGTN_DOCUMENTARY/HLS/CGTN_DOCUMENTARY.m3u8",
     "tvg_id": "CGTNDocumentary.cn@SD",
     "tvg_name": "",
     "tvg_logo": "",
@@ -641,7 +681,7 @@
   },
   {
     "name": "CGTN Documentary (1080p)",
-    "url": "https://hlspackager.akamaized.net/live/DB/CGTN_DOCUMENTARY/HLS/CGTN_DOCUMENTARY.m3u8",
+    "url": "https://amg00405-rakutentv-cgtndocumentary-rakuten-0ql8j.amagi.tv/master.m3u8",
     "tvg_id": "CGTNDocumentary.cn@SD",
     "tvg_name": "",
     "tvg_logo": "",
@@ -696,14 +736,6 @@
     "group_title": ""
   },
   {
-    "name": "四川 Ⅰ 巴中综合台 (1080p) [Not 24/7]",
-    "url": "http://30814.hlsplay.aodianyun.com/lms_30814/tv_channel_246.flv",
-    "tvg_id": "",
-    "tvg_name": "",
-    "tvg_logo": "",
-    "group_title": ""
-  },
-  {
     "name": "天津卫视 (1080p)",
     "url": "http://183.207.248.71/cntv/live1/HD-2500k-1080P-tianjinstv/HD-2500k-1080P-tianjinstv",
     "tvg_id": "TianjinTV.cn@SD",
@@ -736,14 +768,6 @@
     "group_title": ""
   },
   {
-    "name": "新昌新聞綜合 (1080p) [Not 24/7]",
-    "url": "https://l.cztvcloud.com/channels/lantian/SXxinchang1/720p.m3u8",
-    "tvg_id": "",
-    "tvg_name": "",
-    "tvg_logo": "",
-    "group_title": ""
-  },
-  {
     "name": "江苏卫视 (1080p)",
     "url": "http://183.207.248.71/cntv/live1/jiangsustv/jiangsustv",
     "tvg_id": "JiangsuSatelliteTV.cn@SD",
@@ -769,7 +793,7 @@
   },
   {
     "name": "浙江卫视 (1080p)",
-    "url": "http://183.207.248.71/cntv/live1/HD-2500k-1080P-zhejiangstv/HD-2500k-1080P-zhejiangstv",
+    "url": "http://183.207.248.71/cntv/live1/zhejiangstv/zhejiangstv",
     "tvg_id": "ZhejiangSatelliteTV.cn@SD",
     "tvg_name": "",
     "tvg_logo": "",
@@ -777,7 +801,7 @@
   },
   {
     "name": "浙江卫视 (1080p)",
-    "url": "http://183.207.248.71/cntv/live1/zhejiangstv/zhejiangstv",
+    "url": "http://183.207.248.71/cntv/live1/HD-2500k-1080P-zhejiangstv/HD-2500k-1080P-zhejiangstv",
     "tvg_id": "ZhejiangSatelliteTV.cn@SD",
     "tvg_name": "",
     "tvg_logo": "",
@@ -875,22 +899,6 @@
     "name": "Chifeng Comprehensive News Chanel",
     "url": "http://play1-qk.nmtv.cn/live/1735546697341033.m3u8",
     "tvg_id": "ChifengComprehensiveNewsChanel.cn@SD",
-    "tvg_name": "",
-    "tvg_logo": "",
-    "group_title": ""
-  },
-  {
-    "name": "Dongguan Comprehensive News Channel",
-    "url": "http://stream.sun0769.com/dgrtv1/mp4tv1_1500.flv",
-    "tvg_id": "DongguanComprehensiveNewsChannel.cn@SD",
-    "tvg_name": "",
-    "tvg_logo": "",
-    "group_title": ""
-  },
-  {
-    "name": "Dongguan Comprehensive News Channel",
-    "url": "https://stream.sun0769.com/dgrtv1/mp4tv1_800/index.m3u8",
-    "tvg_id": "DongguanComprehensiveNewsChannel.cn@SD",
     "tvg_name": "",
     "tvg_logo": "",
     "group_title": ""
@@ -1050,14 +1058,6 @@
   {
     "name": "前郭综合 [Geo-blocked]",
     "url": "https://stream2.jlntv.cn/qg/sd/live.m3u8",
-    "tvg_id": "",
-    "tvg_name": "",
-    "tvg_logo": "",
-    "group_title": ""
-  },
-  {
-    "name": "吉林市新闻综合 [Geo-blocked]",
-    "url": "https://stream2.jlntv.cn/jilin1/sd/live.m3u8",
     "tvg_id": "",
     "tvg_name": "",
     "tvg_logo": "",
