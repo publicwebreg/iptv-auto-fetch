@@ -1,22 +1,8 @@
 #EXTM3U
 # Generated: IPTV Auto-Fetch v4 
-# Date: 2026-11-26 01:21
-# Total: 16 channels
+# Date: 2026-11-26 16:04
+# Total: 9 channels
 
-#EXTINF:-1 tvg-id="YunnanSatelliteTV.cn@SD",云南卫视 (576p)
-http://183.207.248.71/gitv/live1/G_YUNNAN/G_YUNNAN
-#EXTINF:-1 tvg-id="YunnanSatelliteTV.cn@SD",云南卫视 (576p) [Not 24/7]
-http://183.207.248.71/cntv/live1/yunnanstv/yunnanstv
-#EXTINF:-1,内蒙古卫视 (576p)
-http://183.207.248.71/gitv/live1/G_NEIMENGGU/G_NEIMENGGU
-#EXTINF:-1 tvg-id="SichuanSatelliteTV.cn@SD",四川卫视 (576p)
-http://183.207.248.71/gitv/live1/SCWS/SCWS
-#EXTINF:-1 tvg-id="NingxiaSatelliteChannel.cn@SD",宁夏卫视 (576p) [Not 24/7]
-http://183.207.248.71/gitv/live1/G_NINGXIA/G_NINGXIA
-#EXTINF:-1 tvg-id="JiangsuMovieChannel.cn@SD",江苏影视 (576p) [Not 24/7]
-http://183.207.248.71/gitv/live1/G_JSYS/G_JSYS
-#EXTINF:-1 tvg-id="JiangsuVarietyChannel.cn@SD",江苏综艺 (576p) [Not 24/7]
-http://183.207.248.71/gitv/live1/G_JSZY/G_JSZY
 #EXTINF:-1 tvg-id="LiaoningTV.cn@SD",辽宁卫视 (576p)
 http://183.207.249.71/PLTV/3/224/3221225566/index.m3u8
 #EXTINF:-1,四川 Ⅰ 巴中综合台 (1080p) [Not 24/7]
